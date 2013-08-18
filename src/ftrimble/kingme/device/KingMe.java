@@ -11,5 +11,6 @@ public class KingMe extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
     }
 }
