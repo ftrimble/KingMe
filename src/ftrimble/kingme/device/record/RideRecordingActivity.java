@@ -2,12 +2,17 @@ package ftrimble.kingme.device.record;
 
 import ftrimble.kingme.device.file.KingMeGPX;
 
+import android.app.Activity;
+import android.content.Context;
 import android.text.format.Time;
+
+import com.google.android.gms.location.LocationClient;
+import com.google.android.gms.location.Location;
 
 import java.util.LinkedList;
 
 
-class RideRecordingActivity extends Activity {
+public class RideRecordingActivity extends Activity {
 
     private static final int TIME_BETWEEN_POLLING = 1000;
 
@@ -27,7 +32,7 @@ class RideRecordingActivity extends Activity {
     private RecordingData mAllData;
 
 
-    public RideRecordingActivity(LoactionClient locationClient) {
+    public RideRecordingActivity(LocationClient locationClient) {
         super();
         mLocationClient = locationClient;
         mIsRecording = false;
@@ -41,7 +46,8 @@ class RideRecordingActivity extends Activity {
         mTime = new Time();
         mTime.setToNow();
 
-        mRideFile = new KingMeGPX(Context.getFilesDir(), mRideName, mTime);
+        mRideFile = new KingMeGPX(getApplicationContext().getFilesDir(),
+                                  mRideName, mTime);
         mIsRecording = true;
 
         mLapData = new LinkedList<RecordingData>();

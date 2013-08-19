@@ -8,7 +8,7 @@ import android.text.format.Time;
 
 import org.apache.commons.lang.StringUtils;
 
-class KingMeGPX {
+public class KingMeGPX {
 
     private static final String XML_VERSION =
         "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
@@ -187,7 +187,7 @@ class KingMeGPX {
     /**
      * Terminates a segment; the lap / segment is over.
      */
-    private void endSegment() {
+    public void endSegment() {
         StringBuilder sb = new StringBuilder();
         --mIndentLevel;
 

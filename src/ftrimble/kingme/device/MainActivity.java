@@ -2,9 +2,10 @@ package ftrimble.kingme.device;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.os.Bundle;
 import android.widget.Toast;
-import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.Location;
@@ -16,7 +17,7 @@ public class MainActivity extends Activity
     implements GooglePlayServicesClient.ConnectionCallbacks,
                GooglePlayServicesClient.OnConnectionFailedListener {
 
-    private final LocationClient mLocationClient;
+    private LocationClient mLocationClient;
     private Location mCurrentLocation;
 
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
@@ -56,7 +57,7 @@ public class MainActivity extends Activity
                     "Google Play services is available.");
             return true;
         } else { // Google Play services was not available for some reason
-            int errorCode = connectionResult.getErrorCode();
+            int errorCode = ConnectionResult.getErrorCode();
             Dialog errorDialog = GooglePlayServicesUtil.getErrorDialog
                 (errorCode, this, CONNECTION_FAILURE_RESOLUTION_REQUEST);
 
@@ -127,7 +128,6 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         mLocationClient = new LocationClient(this, this, this);
-
     }
 
     /**
@@ -143,7 +143,7 @@ public class MainActivity extends Activity
      * Called when the activity is no longer visible.
      */
     @Override
-    protected void onStart() {
+    protected void onStop() {
         mLocationClient.disconnect();
         super.onStart();
     }

@@ -30,15 +30,16 @@ class RecordingData {
         mTotalDescent = 0;
     }
 
-    public void updateData(Location newLoc, Location oldLoc, Time now, Time then) {
+    public void updateData(Location newLoc, Location oldLoc,
+                           Time now, Time then) {
         // update elevation information
         float elevationChange = newLoc.getAltitude() - oldLoc.getAltitude();
         if ( elevationChange < 0 ) mTotalDescent -= elevationChange;
         else mTotalAscent += elevationChange;
 
         // update time information
-        mElapsedTime = now.toMillis(false) - mBeginTime.toMillis(false);
-        int timeDiff = now.toMillis(false) - then.toMillis(false);
+        mElapsedTime = (int)(now.toMillis(false) - mBeginTime.toMillis(false));
+        int timeDiff = (int)(now.toMillis(false) - then.toMillis(false));
         mRideTime += timeDiff;
 
         // update distance
@@ -46,7 +47,7 @@ class RecordingData {
         mDistanceTravelled += distanceDiff;
 
         // update speeds
-        mCurrentSpeed = distanceDiff / timeDiff;
+        mCurrentSpeed = (float)(distanceDiff / timeDiff);
         mMaxSpeed = Math.max(mCurrentSpeed,mMaxSpeed);
     }
 
