@@ -3,17 +3,19 @@ package ftrimble.kingme.device;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Intent;
+import android.content.IntentSender;
 import android.os.Bundle;
 import android.widget.Toast;
-import android.util.Log;
+import android.location.Location;
+import android.support.v4.app.FragmentActivity;
 
 import com.google.android.gms.location.LocationClient;
-import com.google.android.gms.location.Location;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 
-
-public class MainActivity extends Activity
+public class MainActivity extends FragmentActivity
     implements GooglePlayServicesClient.ConnectionCallbacks,
                GooglePlayServicesClient.OnConnectionFailedListener {
 
@@ -22,12 +24,8 @@ public class MainActivity extends Activity
 
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
 
-    /**
-     * Displays error results to the user when Google Play
-     * Services are unavailable
-     */
+    // Define a DialogFragment that displays the error dialog
     public static class ErrorDialogFragment extends DialogFragment {
-
         private Dialog mDialog;
 
         public ErrorDialogFragment() {
@@ -35,7 +33,9 @@ public class MainActivity extends Activity
             mDialog = null;
         }
 
-        public void setDialog(Dialog dialog) { mDialog = dialog; }
+        public void setDialog(Dialog dialog) {
+            mDialog = dialog;
+        }
 
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -43,34 +43,25 @@ public class MainActivity extends Activity
         }
     }
 
-    /**
-     * Checks to ensure that Google Play Services are available, and that we
-     * can get user location data; this is necessary for the application to
-     * function.
+    /*
+     * Handle results returned to the FragmentActivity
+     * by Google Play services
      */
-    private boolean areServicesConnected() {
-        int resultCode =
-            GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+    @Override
+    protected void onActivityResult
+        (int requestCode, int resultCode, Intent data) {
 
-        if (ConnectionResult.SUCCESS == resultCode) {
-            Log.d("Location Updates",
-                    "Google Play services is available.");
-            return true;
-        } else { // Google Play services was not available for some reason
-            int errorCode = ConnectionResult.getErrorCode();
-            Dialog errorDialog = GooglePlayServicesUtil.getErrorDialog
-                (errorCode, this, CONNECTION_FAILURE_RESOLUTION_REQUEST);
-
-            if (errorDialog != null) {
-                // Show the returned error dialog in the DialogFragment
-                ErrorDialogFragment errorFragment =
-                        new ErrorDialogFragment();
-                errorFragment.setDialog(errorDialog);
-                errorFragment.show(getSupportFragmentManager(),
-                        "Location Updates");
+        // Decide what to do based on the original request code
+        switch (requestCode) {
+        case CONNECTION_FAILURE_RESOLUTION_REQUEST :
+            switch (resultCode) {
+            case Activity.RESULT_OK :
+                // Try the request again
+                break;
             }
         }
-    }
+     }
+
 
     /**
      * Called by Location Services when the request to connect the
@@ -89,7 +80,7 @@ public class MainActivity extends Activity
     @Override
     public void onDisconnected() {
         Toast.makeText(this, "Disconnected. Please re-connect.",
-                Toast.LENGTH_SHORT).show();
+                       Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -115,8 +106,9 @@ public class MainActivity extends Activity
                 e.printStackTrace();
             }
         } else {
-            // no resolution is available; display an error dialog
-            showErrorDialog(connectionResult.getErrorCode());
+            Toast.makeText(this, "Could not acquire a connection. " +
+                           "Please try again later.",
+                           Toast.LENGTH_SHORT).show();
         }
     }
 

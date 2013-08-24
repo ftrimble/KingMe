@@ -1,6 +1,7 @@
 package ftrimble.kingme.device.record;
 
 import android.text.format.Time;
+import android.location.Location;
 
 import java.lang.Math;
 
@@ -33,7 +34,8 @@ class RecordingData {
     public void updateData(Location newLoc, Location oldLoc,
                            Time now, Time then) {
         // update elevation information
-        float elevationChange = newLoc.getAltitude() - oldLoc.getAltitude();
+        float elevationChange =
+            (float)(newLoc.getAltitude() - oldLoc.getAltitude());
         if ( elevationChange < 0 ) mTotalDescent -= elevationChange;
         else mTotalAscent += elevationChange;
 

@@ -3,8 +3,11 @@ package ftrimble.kingme.device.file;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
+import java.io.IOException;
 
 import android.text.format.Time;
+import android.location.Location;
+import android.util.Log;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -34,7 +37,7 @@ public class KingMeGPX {
     private final BufferedWriter mOut;
     private int mIndentLevel;
 
-    public KingMeGPX(File dir, String rideName, Time time) {
+    public KingMeGPX(File dir, String rideName, Time time) throws IOException {
         mFile = new File(dir, rideName);
         mFileWriter = new FileWriter(mFile);
         mOut = new BufferedWriter(mFileWriter);
@@ -47,23 +50,31 @@ public class KingMeGPX {
      * Initializes the document data for writing.
      */
     private void beginDocument(Time time, String firstTrackName) {
-        addRootNode();
-        addMetaData(time);
-        addTrack(firstTrackName);
+        try {
+            addRootNode();
+            addMetaData(time);
+            addTrack(firstTrackName);
+        } catch ( IOException ioe ) {
+            Log.d("KingMeGPX","Could not write to GPX file.");
+        }
     }
 
     /**
      * Closes the document when a course is finished.
      */
     public void endDocument() {
-        endSegment();
-        endFile();
+        try {
+            endSegment();
+            endFile();
+        } catch ( IOException ioe ) {
+            Log.d("KingMeGPX","Could not close GPX file.");
+        }
     }
 
     /**
      * Adds the root node and the data accompanying it.
      */
-    private void addRootNode() {
+    private void addRootNode() throws IOException {
         StringBuilder sb = new StringBuilder();
 
         sb.append(XML_VERSION);
@@ -77,7 +88,7 @@ public class KingMeGPX {
     /**
      * Adds whatever metadata we're given.
      */
-    private void addMetaData(Time time) {
+    private void addMetaData(Time time) throws IOException {
         StringBuilder sb = new StringBuilder();
 
         sb.append(addNewLine());
@@ -100,10 +111,10 @@ public class KingMeGPX {
     }
 
     /**
-     * This adds a new track; this is a full course. In general, we'll only use
+     * This adds a new track; Context.getApplicationContext() is a full course. In general, we'll only use
      * one for each route on the device.
      */
-    private void addTrack(String trackName) {
+    private void addTrack(String trackName) throws IOException {
         StringBuilder sb = new StringBuilder();
 
         sb.append(addNewLine());
@@ -133,7 +144,11 @@ public class KingMeGPX {
         sb.append("<trkseg>");
         ++mIndentLevel;
 
-        mOut.write(sb.toString(),0,sb.toString().length());
+        try {
+            mOut.write(sb.toString(),0,sb.toString().length());
+        } catch ( IOException ioe ) {
+            Log.d("KingMeGPX","Could not write to GPX file.");
+        }
     }
 
     /**
@@ -181,7 +196,11 @@ public class KingMeGPX {
 
         sb.append("</trkpt>");
 
-        mOut.write(sb.toString(),0,sb.toString().length());
+        try {
+            mOut.write(sb.toString(),0,sb.toString().length());
+        } catch ( IOException ioe ) {
+            Log.d("KingMeGPX","Could not write to GPX file.");
+        }
     }
 
     /**
@@ -194,7 +213,11 @@ public class KingMeGPX {
         sb.append(addNewLine());
         sb.append("</trkseg>");
 
-        mOut.write(sb.toString(),0,sb.toString().length());
+        try {
+            mOut.write(sb.toString(),0,sb.toString().length());
+        } catch ( IOException ioe ) {
+            Log.d("KingMeGPX","Could not write to GPX file.");
+        }
     }
 
 
@@ -202,7 +225,7 @@ public class KingMeGPX {
      * Finishes the course; ends the segment and the root node
      * and closes the file.
      */
-    private void endFile() {
+    private void endFile() throws IOException {
         StringBuilder sb = new StringBuilder();
         endSegment();
         --mIndentLevel;

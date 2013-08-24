@@ -5,12 +5,13 @@ import ftrimble.kingme.device.file.KingMeGPX;
 import android.app.Activity;
 import android.content.Context;
 import android.text.format.Time;
+import android.location.Location;
+import android.util.Log;
 
 import com.google.android.gms.location.LocationClient;
-import com.google.android.gms.location.Location;
 
 import java.util.LinkedList;
-
+import java.io.IOException;
 
 public class RideRecordingActivity extends Activity {
 
@@ -46,8 +47,13 @@ public class RideRecordingActivity extends Activity {
         mTime = new Time();
         mTime.setToNow();
 
-        mRideFile = new KingMeGPX(getApplicationContext().getFilesDir(),
-                                  mRideName, mTime);
+        try {
+            mRideFile = new KingMeGPX(getApplicationContext().getFilesDir(),
+                                      mRideName, mTime);
+        } catch ( IOException ioe ) {
+            Log.d("KingMeGPX","Could not create a GPX file to record");
+        }
+
         mIsRecording = true;
 
         mLapData = new LinkedList<RecordingData>();
@@ -60,7 +66,7 @@ public class RideRecordingActivity extends Activity {
      */
     public void record() {
         while ( mIsRecording ) {
-            mCurrentLocation = mLocationClient.getCurrentLocation();
+            mCurrentLocation = mLocationClient.getLastLocation();
             mTime.setToNow();
 
             mRideFile.addPoint(mCurrentLocation, mTime);
