@@ -1,21 +1,25 @@
 package ftrimble.kingme.device.record;
 
 import ftrimble.kingme.device.file.KingMeGPX;
+import ftrimble.kingme.device.R;
 
 import android.app.Activity;
-import android.content.Context;
-import android.text.format.Time;
 import android.location.Location;
+import android.os.AsyncTask;
+import android.text.format.Time;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.google.android.gms.location.LocationClient;
 
 import java.util.LinkedList;
 import java.io.IOException;
 
-public class RideRecordingActivity extends Activity {
+public class RideRecorder extends AsyncTask<Activity, RecordingData, Void> {
 
     private static final int TIME_BETWEEN_POLLING = 1000;
+
+    private Activity mActivity;
 
     private final LocationClient mLocationClient;
     private Location mCurrentLocation;
@@ -33,10 +37,47 @@ public class RideRecordingActivity extends Activity {
     private RecordingData mAllData;
 
 
-    public RideRecordingActivity(LocationClient locationClient) {
+    public RideRecorder(LocationClient locationClient) {
         super();
         mLocationClient = locationClient;
         mIsRecording = false;
+    }
+
+    @Override
+    protected Void doInBackground(Activity... args) {
+        mActivity = args[0];
+        beginRecording();
+        while ( mIsRecording) {
+            record();
+            publishProgress();
+
+            try {
+                // wait between polling for data
+                Thread.sleep(TIME_BETWEEN_POLLING);
+            } catch ( InterruptedException ie ) {
+                ie.printStackTrace();
+            }
+        }
+        stopRecording();
+
+        return null;
+    }
+
+    @Override
+    protected void onProgressUpdate(RecordingData... data) {
+        for ( RecordingData datum : data ) {
+            // update speed data
+            TextView view = (TextView) mActivity.findViewById(R.id.speed_value);
+            view.setText(Float.toString(datum.getCurrentSpeed()));
+
+            // update distance datum
+            view = (TextView) mActivity.findViewById(R.id.distance_value);
+            view.setText(Float.toString(datum.getDistanceTravelled()));
+
+            // update time datum
+            view = (TextView) mActivity.findViewById(R.id.time_value);
+            view.setText(Float.toString(datum.getElapsedTime()));
+        }
     }
 
     /**
@@ -48,8 +89,8 @@ public class RideRecordingActivity extends Activity {
         mTime.setToNow();
 
         try {
-            mRideFile = new KingMeGPX(getApplicationContext().getFilesDir(),
-                                      mRideName, mTime);
+            mRideFile = new KingMeGPX(mActivity.getApplicationContext()
+                                      .getFilesDir(), mRideName, mTime);
         } catch ( IOException ioe ) {
             Log.d("KingMeGPX","Could not create a GPX file to record");
         }
@@ -58,14 +99,13 @@ public class RideRecordingActivity extends Activity {
 
         mLapData = new LinkedList<RecordingData>();
         mAllData = new RecordingData(mTime);
-        record();
     }
 
     /**
      * Polls for data and publishes to a file.
      */
     public void record() {
-        while ( mIsRecording ) {
+        if ( mIsRecording ) {
             mCurrentLocation = mLocationClient.getLastLocation();
             mTime.setToNow();
 
@@ -80,8 +120,6 @@ public class RideRecordingActivity extends Activity {
             mLastTime.set(mTime);
             mLastLocation.set(mCurrentLocation);
 
-            // wait between polling for data
-            // wait(TIME_BETWEEN_POLLING);
         }
     }
 

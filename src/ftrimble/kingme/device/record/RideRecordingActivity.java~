@@ -1,5 +1,0 @@
-package ftrimble.device.record;
-
-class RideRecordingActivity extends Activity {
-
-}

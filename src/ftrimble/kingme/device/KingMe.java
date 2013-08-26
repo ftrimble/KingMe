@@ -1,21 +1,24 @@
 package ftrimble.kingme.device;
 
+import ftrimble.kingme.device.record.RideRecorder;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Intent;
 import android.content.IntentSender;
-import android.os.Bundle;
-import android.widget.Toast;
 import android.location.Location;
 import android.support.v4.app.FragmentActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
-import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.location.LocationClient;
 
-public class MainActivity extends FragmentActivity
+public class KingMe extends FragmentActivity
     implements GooglePlayServicesClient.ConnectionCallbacks,
                GooglePlayServicesClient.OnConnectionFailedListener {
 
@@ -138,5 +141,9 @@ public class MainActivity extends FragmentActivity
     protected void onStop() {
         mLocationClient.disconnect();
         super.onStart();
+    }
+
+    public void onClick(View v) {
+        new RideRecorder(mLocationClient).execute(this);
     }
 }

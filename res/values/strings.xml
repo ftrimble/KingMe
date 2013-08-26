@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">KingMe</string>
+    <string name="curr_speed">Current Speed</string>
+    <string name="distance">Distance Travelled</string>
+    <string name="elapsed_time">Elapsed Time</string>
 </resources>

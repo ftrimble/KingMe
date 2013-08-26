@@ -1,13 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-<TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="Hello World, KingMe"
-    />
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/all_data"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="64pt">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:id="@+id/speed_box"
+                  android:layout_weight="1"
+                  android:layout_width="0pt"
+                  android:layout_height="60pt">
+      <TextView android:layout_width="fill_parent"
+                android:gravity="center"
+                android:layout_height="8pt"
+                android:text="@string/curr_speed" />
+      <TextView android:id="@+id/speed_value"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:id="@+id/dist_box"
+                  android:layout_weight="1"
+                  android:layout_width="0pt"
+                  android:layout_height="60pt">
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="8pt"
+                android:gravity="center"
+                android:text="@string/distance" />
+      <TextView android:id="@+id/distance_value"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:id="@+id/time_box"
+                  android:layout_weight="1"
+                  android:layout_width="0pt"
+                  android:layout_height="60pt">
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="8pt"
+                android:gravity="center"
+                android:text="@string/elapsed_time" />
+      <TextView android:id="@+id/time_value"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+    </LinearLayout>
+  </LinearLayout>
 </LinearLayout>
 

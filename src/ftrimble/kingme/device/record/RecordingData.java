@@ -7,7 +7,7 @@ import java.lang.Math;
 
 class RecordingData {
 
-    private double mDistanceTravelled;
+    private float mDistanceTravelled;
 
     private Time mBeginTime;
     private int mElapsedTime;
@@ -18,6 +18,15 @@ class RecordingData {
 
     private float mTotalAscent;
     private float mTotalDescent;
+
+    public float getDistanceTravelled() { return mDistanceTravelled; }
+    public Time getBeginTime() { return mBeginTime; }
+    public int getElapsedTime() { return mElapsedTime; }
+    public int getRideTime() { return mRideTime; }
+    public float getMaxSpeed() { return mMaxSpeed; }
+    public float getCurrentSpeed() { return mCurrentSpeed; }
+    public float getTotalAscent() { return mTotalAscent; }
+    public float getTotalDescent() { return mTotalDescent; }
 
     public RecordingData(Time time) {
         mBeginTime = new Time(time);
