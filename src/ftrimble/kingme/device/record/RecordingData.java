@@ -42,6 +42,10 @@ class RecordingData {
 
     public void updateData(Location newLoc, Location oldLoc,
                            Time now, Time then) {
+        // on first update set 0 change
+        if ( oldLoc == null ) oldLoc = newLoc;
+        if ( then == null ) then = now;
+
         // update elevation information
         float elevationChange =
             (float)(newLoc.getAltitude() - oldLoc.getAltitude());

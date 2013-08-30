@@ -13,13 +13,12 @@ import android.widget.TextView;
 import com.google.android.gms.location.LocationClient;
 
 import java.util.LinkedList;
+import java.io.File;
 import java.io.IOException;
 
-public class RideRecorder extends AsyncTask<Activity, RecordingData, Void> {
+public class RideRecorder extends AsyncTask<Void, RecordingData, Void> {
 
     private static final int TIME_BETWEEN_POLLING = 1000;
-
-    private Activity mActivity;
 
     private final LocationClient mLocationClient;
     private Location mCurrentLocation;
@@ -27,6 +26,7 @@ public class RideRecorder extends AsyncTask<Activity, RecordingData, Void> {
     private String mRideName;
     private KingMeGPX mRideFile;
 
+    private TextView[] mViews;
     private Time mTime;
     private boolean mIsRecording;
 
@@ -36,17 +36,19 @@ public class RideRecorder extends AsyncTask<Activity, RecordingData, Void> {
     private LinkedList<RecordingData> mLapData;
     private RecordingData mAllData;
 
+    public boolean getIsRecording() { return mIsRecording; }
 
-    public RideRecorder(LocationClient locationClient) {
+
+    public RideRecorder(LocationClient locationClient, TextView[] views) {
         super();
         mLocationClient = locationClient;
         mIsRecording = false;
+        mViews = views;
     }
 
     @Override
-    protected Void doInBackground(Activity... args) {
-        mActivity = args[0];
-        beginRecording();
+    protected Void doInBackground(Void... args) {
+        mIsRecording = true;
         while ( mIsRecording) {
             record();
             publishProgress();
@@ -58,25 +60,28 @@ public class RideRecorder extends AsyncTask<Activity, RecordingData, Void> {
                 ie.printStackTrace();
             }
         }
-        stopRecording();
-
         return null;
     }
 
     @Override
     protected void onProgressUpdate(RecordingData... data) {
         for ( RecordingData datum : data ) {
-            // update speed data
-            TextView view = (TextView) mActivity.findViewById(R.id.speed_value);
-            view.setText(Float.toString(datum.getCurrentSpeed()));
-
-            // update distance datum
-            view = (TextView) mActivity.findViewById(R.id.distance_value);
-            view.setText(Float.toString(datum.getDistanceTravelled()));
-
-            // update time datum
-            view = (TextView) mActivity.findViewById(R.id.time_value);
-            view.setText(Float.toString(datum.getElapsedTime()));
+            for ( TextView view : mViews ) {
+                switch ( view.getId() ) {
+                case R.id.speed_value:
+                    view.setText(Float.toString(datum.getCurrentSpeed()));
+                    break;
+                case R.id.distance_value:
+                    view.setText(Float.toString(datum.getDistanceTravelled()));
+                    break;
+                case R.id.time_value:
+                    view.setText(Float.toString(datum.getElapsedTime()));
+                    break;
+                default:
+                    view.setText("0.0");
+                    break;
+                }
+            }
         }
     }
 
@@ -84,20 +89,22 @@ public class RideRecorder extends AsyncTask<Activity, RecordingData, Void> {
      * Begins an activity recording. This means initializing a new file
      * and beginning polling of data.
      */
-    public void beginRecording() {
+    public void beginRecording(File dir) {
         mTime = new Time();
+        mLastTime = new Time();
         mTime.setToNow();
+        mLastTime.set(mTime);
 
+        // TODO name file based on TOD or other factors.
+        mRideName = "test_ride";
         try {
-            mRideFile = new KingMeGPX(mActivity.getApplicationContext()
-                                      .getFilesDir(), mRideName, mTime);
+            mRideFile = new KingMeGPX(dir, mRideName, mTime);
         } catch ( IOException ioe ) {
             Log.d("KingMeGPX","Could not create a GPX file to record");
         }
 
-        mIsRecording = true;
-
         mLapData = new LinkedList<RecordingData>();
+        mLapData.add(new RecordingData(mTime));
         mAllData = new RecordingData(mTime);
     }
 
@@ -118,7 +125,7 @@ public class RideRecorder extends AsyncTask<Activity, RecordingData, Void> {
                                           mTime, mLastTime);
 
             mLastTime.set(mTime);
-            mLastLocation.set(mCurrentLocation);
+            mLastLocation = mCurrentLocation;
 
         }
     }

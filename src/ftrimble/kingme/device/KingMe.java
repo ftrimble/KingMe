@@ -11,12 +11,17 @@ import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationClient;
+
+import java.io.File;
 
 public class KingMe extends FragmentActivity
     implements GooglePlayServicesClient.ConnectionCallbacks,
@@ -25,7 +30,32 @@ public class KingMe extends FragmentActivity
     private LocationClient mLocationClient;
     private Location mCurrentLocation;
 
+    private RideRecorder mRecorder;
+
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
+
+    private OnClickListener mStartListener = new OnClickListener() {
+            public void onClick(View v) {
+                if ( !mRecorder.getIsRecording() ) {
+                    mRecorder.execute();
+                } else {
+                    // send the pause signal
+                    // mRecorder.pause();
+                }
+            }
+        };
+
+    private OnClickListener mLapListener = new OnClickListener() {
+            public void onClick(View v) {
+                if ( mRecorder.getIsRecording() ) {
+                    // send the lap signal
+                    // mRecorder.lap();
+                } else {
+                    // send the reset signal
+                    // mRecorder.reset();
+                }
+            }
+        };
 
     // Define a DialogFragment that displays the error dialog
     public static class ErrorDialogFragment extends DialogFragment {
@@ -123,6 +153,21 @@ public class KingMe extends FragmentActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         mLocationClient = new LocationClient(this, this, this);
+
+        // views to update
+        TextView[] views = new TextView[]
+            { (TextView) findViewById(R.id.speed_value),
+              (TextView) findViewById(R.id.distance_value),
+              (TextView) findViewById(R.id.time_value) };
+        mRecorder = new RideRecorder(mLocationClient, views);
+        mRecorder.beginRecording(getFilesDir());
+
+
+        Button start_pause = (Button) findViewById(R.id.start_pause);
+        Button lap_reset = (Button) findViewById(R.id.lap_reset);
+
+        start_pause.setOnClickListener(mStartListener);
+        lap_reset.setOnClickListener(mLapListener);
     }
 
     /**
@@ -143,7 +188,4 @@ public class KingMe extends FragmentActivity
         super.onStart();
     }
 
-    public void onClick(View v) {
-        new RideRecorder(mLocationClient).execute(this);
-    }
 }

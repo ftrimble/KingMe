@@ -4,10 +4,26 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:id="@+id/buttons"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">>
+    <Button android:id="@+id/start_pause"
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:text="@string/start_pause_text" />
+    <Button android:id="@+id/lap_reset"
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:text="@string/lap_reset_text" />
+  </LinearLayout>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/all_data"
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
-                android:layout_height="64pt">
+                android:layout_height="fill_parent">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:orientation="vertical"
                   android:id="@+id/speed_box"
@@ -51,7 +67,7 @@
       <TextView android:id="@+id/time_value"
                 android:gravity="center"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent" />
+                android:layout_height="wrap_content" />
     </LinearLayout>
   </LinearLayout>
 </LinearLayout>

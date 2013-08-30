@@ -166,6 +166,7 @@ public class KingMeGPX {
      * Adds data about a specific point in a course.
      */
     public void addPoint(Location location, Time time) {
+        if ( location == null ) System.out.println("Received a null location");
         StringBuilder sb = new StringBuilder();
 
         sb.append(addNewLine());
