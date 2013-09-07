@@ -4,6 +4,10 @@
     <string name="curr_speed">Current Speed</string>
     <string name="distance">Distance Travelled</string>
     <string name="elapsed_time">Elapsed Time</string>
-    <string name="start_pause_text">Start</string>
-    <string name="lap_reset_text"></string>
+    <string name="start_pause_text">Start/Stop</string>
+    <string name="lap_reset_text">Lap/Reset</string>
+    <string name="recording_started">Beginning Recording</string>
+    <string name="recording_stopped">Stopping Recording</string>
+    <string name="recording_label">Recording a ride via KingMe</string>
+    <string name="recording_service_started"></string>
 </resources>

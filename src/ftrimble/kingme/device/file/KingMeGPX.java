@@ -1,3 +1,17 @@
+/**
+ * Copyright 2013 Forest Trimble
+ *
+ * Licensed under the Apache Licesnse, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0
+
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package ftrimble.kingme.device.file;
 
 import java.io.File;
@@ -111,8 +125,8 @@ public class KingMeGPX {
     }
 
     /**
-     * This adds a new track; Context.getApplicationContext() is a full course. In general, we'll only use
-     * one for each route on the device.
+     * This adds a new track; Context.getApplicationContext() is a full course. 
+     * In general, we'll only use one for each route on the device.
      */
     private void addTrack(String trackName) throws IOException {
         StringBuilder sb = new StringBuilder();
