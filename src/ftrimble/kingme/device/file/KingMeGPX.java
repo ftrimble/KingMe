@@ -68,6 +68,7 @@ public class KingMeGPX {
             addRootNode();
             addMetaData(time);
             addTrack(firstTrackName);
+            addSegment();
         } catch ( IOException ioe ) {
             Log.d("KingMeGPX","Could not write to GPX file.");
         }
@@ -78,7 +79,6 @@ public class KingMeGPX {
      */
     public void endDocument() {
         try {
-            endSegment();
             endFile();
         } catch ( IOException ioe ) {
             Log.d("KingMeGPX","Could not close GPX file.");

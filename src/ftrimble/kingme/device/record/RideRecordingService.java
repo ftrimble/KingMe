@@ -17,24 +17,20 @@ package ftrimble.kingme.device.record;
 import ftrimble.kingme.device.file.KingMeGPX;
 import ftrimble.kingme.device.R;
 
-import android.app.Notification;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
-import android.content.IntentSender;
 import android.location.Location;
+import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationCompat.Builder;
 import android.text.format.Time;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
-import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
@@ -54,8 +50,13 @@ public class RideRecordingService
     private static final int NOTIFICATION = R.string.recording_service_started;
     private static final int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
 
+    public static final String RIDE_DATA = "ride_data";
+    private static final String BROADCAST = "ftrimble.kingme.device.KingMe";
+
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mNotificationBuilder;
+
+    private final IBinder mBinder = new RideRecordingBinder();
 
     private LocationClient mLocationClient;
     private LocationRequest mLocationRequest;
@@ -63,7 +64,7 @@ public class RideRecordingService
     private String mRideName;
     private KingMeGPX mRideFile;
 
-    private boolean mIsRecording;
+    private boolean mIsRecording = false;
 
     // Data
     private Time mTime;
@@ -73,6 +74,12 @@ public class RideRecordingService
     private LinkedList<RecordingData> mLapData;
     private RecordingData mAllData;
 
+    public class RideRecordingBinder extends Binder {
+        public RideRecordingService getService() {
+            return RideRecordingService.this;
+        }
+    }
+
     @Override
     public void onCreate() {
         mLocationRequest = LocationRequest.create();
@@ -81,12 +88,13 @@ public class RideRecordingService
         mLocationRequest.setFastestInterval(500);
 
         mLocationClient = new LocationClient(getApplicationContext(),this,this);
+        mLocationClient.connect();
 
         mNotificationManager =
             (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         mNotificationBuilder =  new NotificationCompat.Builder(this)
             .setContentTitle("King Me")
-            .setContentText("Recording has Started")
+            .setContentText("Recording Started")
             .setSmallIcon(R.drawable.ic_launcher)
             .setOngoing(true);
     }
@@ -100,8 +108,6 @@ public class RideRecordingService
     public void onConnected(Bundle dataBundle) {
         // Display the connection status
         Log.i("info", "Location client is Connected");
-        mLocationClient.requestLocationUpdates(mLocationRequest,this);
-        beginRecording(getApplicationContext().getFilesDir());
     }
 
     /**
@@ -145,29 +151,64 @@ public class RideRecordingService
      * access to our location data.
      */
     @Override
-    public void onStart(Intent intent, int startId) {
+    public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i("info","Started RideRecordingService");
-        mLocationClient.connect();
-        mNotificationManager.notify(NOTIFICATION,mNotificationBuilder.build());
+        beginRecording(getApplicationContext().getFilesDir());
+        return START_STICKY;
     }
 
     @Override
     public IBinder onBind(Intent intent) {
-        return null;
-    }
-
-    @Override
-    public void onDestroy() {
-        mLocationClient.removeLocationUpdates(this);
-        mNotificationManager.cancel(NOTIFICATION);
-        mRideFile.endDocument();
-        super.onDestroy();
+        return mBinder;
     }
 
     @Override
     public void onLocationChanged(Location newLocation) {
         mCurrentLocation = newLocation;
         record();
+        Intent intent = new Intent(BROADCAST);
+        intent.putExtra(RIDE_DATA,mAllData);
+        sendBroadcast(intent);
+    }
+
+    /**
+     * Swaps the recording status of the service. Also updates the
+     * notification to reflect the updated status.
+     */
+    public void start_pause() {
+        if ( mIsRecording ) {
+            mLocationClient.removeLocationUpdates(this);
+            mNotificationBuilder.setContentText("Recording Paused");
+            mNotificationManager.notify(NOTIFICATION,
+                                        mNotificationBuilder.build());
+        } else {
+            mLocationClient.requestLocationUpdates(mLocationRequest,this);
+            // ensure that ridetime only stores time that the clock was running.
+            mLastTime.setToNow();
+            mLastLocation = null;
+            mNotificationBuilder.setContentText("Recording Started");
+            mNotificationManager.notify(NOTIFICATION,
+                                        mNotificationBuilder.build());
+        }
+        mIsRecording = !mIsRecording;
+    }
+
+    /**
+     * Begins a lap if the ride is in progress; ends the ride and terminates
+     * the service if it is stopped.
+     */
+    public void lap_reset() {
+        if ( mIsRecording ) {
+            mRideFile.endSegment();
+            mRideFile.addSegment();
+
+            mLapData.add(new RecordingData(mTime));
+        } else {
+            mLocationClient.removeLocationUpdates(this);
+            mNotificationManager.cancel(NOTIFICATION);
+            mRideFile.endDocument();
+            stopSelf();
+        }
     }
 
     /**
@@ -195,7 +236,6 @@ public class RideRecordingService
      * Polls for data and publishes to a file.
      */
     public void record() {
-        mCurrentLocation = mLocationClient.getLastLocation();
         mTime.setToNow();
 
         mRideFile.addPoint(mCurrentLocation, mTime);
@@ -215,24 +255,6 @@ public class RideRecordingService
         mRideFile.addSegment();
 
         mLapData.add(new RecordingData(mTime));
-    }
-
-    public void resume() {
-        mIsRecording = true;
-
-        // ensure that ridetime only stores time that the clock was running.
-        mLastTime.setToNow();
-        mLastLocation = null;
-
-        record();
-    }
-
-    /**
-     * Pauses an activity recording. This means that location polling will
-     * stop, and metrics will no longer be updated.
-     */
-    public void stopRecording() {
-        mIsRecording = false;
     }
 
     /**

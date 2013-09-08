@@ -15,8 +15,11 @@
 package ftrimble.kingme.device;
 
 import ftrimble.kingme.device.record.RideRecordingService;
+import ftrimble.kingme.device.record.RideRecordingService.RideRecordingBinder;
+import ftrimble.kingme.device.record.RecordingData;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -38,22 +41,69 @@ public class KingMe extends Activity {
 
     private OnClickListener mStartListener = new OnClickListener() {
             public void onClick(View v) {
-                // Send start button clicked signal
-                Intent intent =
-                    new Intent(KingMe.this,RideRecordingService.class);
-
-                startService(intent);
+                if ( mIsBound && mRecorder != null ) {
+                    mRecorder.start_pause();
+                }
             }
         };
 
     private OnClickListener mLapListener = new OnClickListener() {
             public void onClick(View v) {
-                Intent intent =
-                    new Intent(KingMe.this,RideRecordingService.class);
-
-                stopService(intent);
+                // no need to do anything if recording hasn't started
+                if ( mIsBound && mRecorder != null ) {
+                    mRecorder.lap_reset();
+                }
             }
         };
+
+    private BroadcastReceiver mReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                Bundle bundle = intent.getExtras();
+                if ( bundle != null ) {
+                    RecordingData rideData = (RecordingData)
+                        bundle.get(RideRecordingService.RIDE_DATA);
+                    TextView speed = (TextView) findViewById(R.id.speed_value),
+                        distance = (TextView) findViewById(R.id.distance_value),
+                        time = (TextView) findViewById(R.id.time_value);
+                    speed.setText(Float.toString(rideData.getCurrentSpeed()));
+                    distance.setText(Float.toString
+                                     (rideData.getDistanceTravelled()));
+                    time.setText(Float.toString(rideData.getElapsedTime()));
+                }
+            }
+        };
+
+    private ServiceConnection mConnection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName className,
+                                           IBinder service) {
+                mRecorder = ((RideRecordingBinder)service).getService();
+                mIsBound = true;
+            }
+            public void onServiceDisconnected(ComponentName arg0) {
+                mRecorder = null;
+                mIsBound = false;
+            }
+        };
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        Intent intent = new Intent(KingMe.this,RideRecordingService.class);
+        bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        if ( mIsBound ) {
+            unbindService(mConnection);
+            mIsBound = false;
+        }
+    }
 
     /**
      * Called when the activity is first created.
@@ -68,6 +118,10 @@ public class KingMe extends Activity {
 
         start_pause.setOnClickListener(mStartListener);
         lap_reset.setOnClickListener(mLapListener);
+
+        Intent intent =
+            new Intent(KingMe.this,RideRecordingService.class);
+        startService(intent);
     }
 
 }

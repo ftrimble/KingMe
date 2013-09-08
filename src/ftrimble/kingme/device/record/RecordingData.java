@@ -17,9 +17,10 @@ package ftrimble.kingme.device.record;
 import android.text.format.Time;
 import android.location.Location;
 
+import java.io.Serializable;
 import java.lang.Math;
 
-class RecordingData {
+public class RecordingData implements Serializable {
 
     private float mDistanceTravelled;
 
