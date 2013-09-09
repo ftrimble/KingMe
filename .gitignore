@@ -16,3 +16,6 @@ google-play-services_lib
 
 # Local configuration file (sdk path, etc)
 local.properties
+
+# emacs stuff
+.emacs.desktop
