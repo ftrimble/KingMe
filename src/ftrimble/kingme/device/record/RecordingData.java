@@ -18,6 +18,7 @@ import android.text.format.Time;
 import android.location.Location;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
 
 import java.io.Serializable;
 import java.lang.Math;
@@ -115,6 +116,7 @@ public class RecordingData implements Parcelable {
         // update distance
         double distanceDiff = oldLoc.distanceTo(newLoc);
         mDistanceTravelled += distanceDiff;
+        Log.i("Info","Updated distance travelled: " + distanceDiff);
 
         // update speeds
         mCurrentSpeed = (float)(distanceDiff / timeDiff);

@@ -23,6 +23,7 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -43,6 +44,8 @@ public class KingMe extends Activity {
             public void onClick(View v) {
                 if ( mIsBound && mRecorder != null ) {
                     mRecorder.start_pause();
+                    TextView speed = (TextView) findViewById(R.id.speed_value);
+                    speed.setText("2.0");
                 }
             }
         };
@@ -93,6 +96,19 @@ public class KingMe extends Activity {
 
         Intent intent = new Intent(KingMe.this,RideRecordingService.class);
         bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        registerReceiver(mReceiver,
+                         new IntentFilter(RideRecordingService.BROADCAST));
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        unregisterReceiver(mReceiver);
     }
 
     @Override

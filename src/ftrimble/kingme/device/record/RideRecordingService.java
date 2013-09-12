@@ -51,7 +51,7 @@ public class RideRecordingService
     private static final int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
 
     public static final String RIDE_DATA = "ride_data";
-    private static final String BROADCAST = "ftrimble.kingme.device.KingMe";
+    public static final String BROADCAST = "ftrimble.kingme.device.KingMe";
 
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mNotificationBuilder;
@@ -65,6 +65,7 @@ public class RideRecordingService
     private KingMeGPX mRideFile;
 
     private boolean mIsRecording = false;
+    private boolean mFileBegan = false;
 
     // Data
     private Time mTime;
@@ -152,8 +153,6 @@ public class RideRecordingService
      */
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.i("info","Started RideRecordingService");
-        beginRecording(getApplicationContext().getFilesDir());
         return START_STICKY;
     }
 
@@ -182,6 +181,10 @@ public class RideRecordingService
             mNotificationManager.notify(NOTIFICATION,
                                         mNotificationBuilder.build());
         } else {
+            if ( !mFileBegan ) {
+                beginRecording(getApplicationContext().getFilesDir());
+            }
+
             mLocationClient.requestLocationUpdates(mLocationRequest,this);
             // ensure that ridetime only stores time that the clock was running.
             mLastTime.setToNow();
@@ -207,6 +210,7 @@ public class RideRecordingService
             mLocationClient.removeLocationUpdates(this);
             mNotificationManager.cancel(NOTIFICATION);
             mRideFile.endDocument();
+            mFileBegan = false;
             stopSelf();
         }
     }
@@ -223,6 +227,7 @@ public class RideRecordingService
         mRideName = "test_ride";
         try {
             mRideFile = new KingMeGPX(dir, mRideName, mTime);
+            mFileBegan = true;
         } catch ( IOException ioe ) {
             Log.d("KingMeGPX","Could not create a GPX file to record");
         }
