@@ -19,3 +19,4 @@ local.properties
 
 # emacs stuff
 .emacs.desktop
+.emacs.desktop.lock

@@ -16,11 +16,13 @@ package ftrimble.kingme.device.record;
 
 import android.text.format.Time;
 import android.location.Location;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import java.io.Serializable;
 import java.lang.Math;
 
-public class RecordingData implements Serializable {
+public class RecordingData implements Parcelable {
 
     private float mDistanceTravelled;
 
@@ -54,6 +56,44 @@ public class RecordingData implements Serializable {
         mTotalAscent = 0;
         mTotalDescent = 0;
     }
+
+    public RecordingData(Parcel in) {
+        mDistanceTravelled = in.readFloat();
+        mElapsedTime = in.readInt();
+        mRideTime = in.readInt();
+        mMaxSpeed = in.readFloat();
+        mCurrentSpeed = in.readFloat();
+        mTotalAscent = in.readFloat();
+        mTotalDescent = in.readFloat();
+    }
+
+    @Override
+    public void writeToParcel(Parcel out, int flags) {
+        out.writeFloat(mDistanceTravelled);
+        out.writeInt(mElapsedTime);
+        out.writeInt(mRideTime);
+        out.writeFloat(mMaxSpeed);
+        out.writeFloat(mCurrentSpeed);
+        out.writeFloat(mTotalAscent);
+        out.writeFloat(mTotalDescent);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Parcelable.Creator<RecordingData> CREATOR =
+        new Parcelable.Creator<RecordingData>() {
+        public RecordingData createFromParcel(Parcel in) {
+            return new RecordingData(in);
+        }
+
+        public RecordingData[] newArray(int size) {
+            return new RecordingData[size];
+        }
+    };
+
 
     public void updateData(Location newLoc, Location oldLoc,
                            Time now, Time then) {
