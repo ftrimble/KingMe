@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="units">
+    <item>"Metric"</item>
+    <item>"Statute"</item>
+  </string-array>
+  <integer-array name="units_values">
+    <item>0</item>
+    <item>1</item>
+  </integer-array>
+</resources>

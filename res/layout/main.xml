@@ -36,6 +36,7 @@
                 android:text="@string/curr_speed" />
       <TextView android:id="@+id/speed_value"
                 android:gravity="center"
+                android:text="@string/curr_speed_default"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent" />
     </LinearLayout>
@@ -51,6 +52,7 @@
                 android:text="@string/distance" />
       <TextView android:id="@+id/distance_value"
                 android:gravity="center"
+                android:text="@string/distance_default"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent" />
     </LinearLayout>
@@ -66,6 +68,7 @@
                 android:text="@string/elapsed_time" />
       <TextView android:id="@+id/time_value"
                 android:gravity="center"
+                android:text="@string/elapsed_time_default"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
     </LinearLayout>

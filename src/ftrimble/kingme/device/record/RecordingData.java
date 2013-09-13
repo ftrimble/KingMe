@@ -113,13 +113,12 @@ public class RecordingData implements Parcelable {
         int timeDiff = (int)(now.toMillis(false) - then.toMillis(false));
         mRideTime += timeDiff;
 
-        // update distance
+        // update distance (in meters)
         double distanceDiff = oldLoc.distanceTo(newLoc);
         mDistanceTravelled += distanceDiff;
-        Log.i("Info","Updated distance travelled: " + distanceDiff);
 
-        // update speeds
-        mCurrentSpeed = (float)(distanceDiff / timeDiff);
+        // update speeds (in meters / ms)
+        mCurrentSpeed = (float) (distanceDiff / timeDiff);
         mMaxSpeed = Math.max(mCurrentSpeed,mMaxSpeed);
     }
 

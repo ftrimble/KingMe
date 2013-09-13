@@ -2,12 +2,18 @@
 <resources>
     <string name="app_name">KingMe</string>
     <string name="curr_speed">Current Speed</string>
+    <string name="curr_speed_default">0.00 mph</string>
     <string name="distance">Distance Travelled</string>
+    <string name="distance_default">0.00 mi</string>
     <string name="elapsed_time">Elapsed Time</string>
+    <string name="elapsed_time_default">0:00:00</string>
     <string name="start_pause_text">Start/Stop</string>
     <string name="lap_reset_text">Lap/Reset</string>
     <string name="recording_started">Beginning Recording</string>
     <string name="recording_stopped">Stopping Recording</string>
     <string name="recording_label">Recording a ride via KingMe</string>
     <string name="recording_service_started"></string>
+
+    <string name="units_category">Units</string>
+    <string name="units_dialog">What units would you like?</string>
 </resources>

@@ -25,18 +25,35 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.File;
+import java.lang.Math;
 
 public class KingMe extends Activity {
 
+    private static final String METRIC_SPEED_UNITS="kmh";
+    private static final String STATUTE_SPEED_UNITS="mph";
+    private static final String METRIC_DISTANCE_UNITS="km";
+    private static final String STATUTE_DISTANCE_UNITS="mi";
+    public final static float METERS_TO_MILES = 3.28084f/5280;
+    public final static float METERS_TO_KILOMETERS = 1000f;
+    public final static float MS_TO_SECONDS = 1.0f/1000;
+    public final static int SECONDS_PER_MINUTE = 60;
+    public final static int MINUTES_PER_HOUR = 60;
+    public final static float MS_TO_MINUTES = MS_TO_SECONDS/60;
+    public final static float MS_TO_HOURS = MS_TO_MINUTES/60;
+
     private RideRecordingService mRecorder;
+
+    private SharedPreferences mPreferences;
 
     private boolean mIsBound;
 
@@ -44,8 +61,6 @@ public class KingMe extends Activity {
             public void onClick(View v) {
                 if ( mIsBound && mRecorder != null ) {
                     mRecorder.start_pause();
-                    TextView speed = (TextView) findViewById(R.id.speed_value);
-                    speed.setText("2.0");
                 }
             }
         };
@@ -59,6 +74,8 @@ public class KingMe extends Activity {
             }
         };
 
+
+
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -69,10 +86,29 @@ public class KingMe extends Activity {
                     TextView speed = (TextView) findViewById(R.id.speed_value),
                         distance = (TextView) findViewById(R.id.distance_value),
                         time = (TextView) findViewById(R.id.time_value);
-                    speed.setText(Float.toString(rideData.getCurrentSpeed()));
-                    distance.setText(Float.toString
-                                     (rideData.getDistanceTravelled()));
-                    time.setText(Float.toString(rideData.getElapsedTime()));
+                    float speedVal = rideData.getCurrentSpeed()/MS_TO_HOURS,
+                        distanceVal = rideData.getDistanceTravelled();
+                    String speedString, distanceString;
+                    if ( mPreferences.getInt("units_category_key",0) == 0 ) {
+                        speed.setText(String.format
+                                      ("%1.2f%s", speedVal*METERS_TO_MILES,
+                                       STATUTE_SPEED_UNITS));
+                        distance.setText(String.format
+                                         ("%1.2f%s", distanceVal*METERS_TO_MILES,
+                                          STATUTE_DISTANCE_UNITS));
+                    } else {
+                        speed.setText(String.format
+                                      ("%1.2f%s", speedVal*METERS_TO_KILOMETERS,
+                                       METRIC_SPEED_UNITS));
+                        distance.setText(String.format
+                                         ("%1.2f%s", distanceVal*METERS_TO_KILOMETERS,
+                                          METRIC_DISTANCE_UNITS));
+                    }
+                    int timeInMS = rideData.getElapsedTime();
+                    time.setText(String.format
+                                 ("%d:%02d:%02d", Math.round(timeInMS*MS_TO_HOURS),
+                                  Math.round(timeInMS*MS_TO_MINUTES) % MINUTES_PER_HOUR,
+                                  Math.round(timeInMS*MS_TO_SECONDS) % SECONDS_PER_MINUTE));
                 }
             }
         };
@@ -103,6 +139,7 @@ public class KingMe extends Activity {
         super.onResume();
         registerReceiver(mReceiver,
                          new IntentFilter(RideRecordingService.BROADCAST));
+        mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
     }
 
     @Override
