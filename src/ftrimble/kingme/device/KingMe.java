@@ -14,6 +14,7 @@
  */
 package ftrimble.kingme.device;
 
+import ftrimble.kingme.device.preferences.KingMeSettings;
 import ftrimble.kingme.device.record.RideRecordingService;
 import ftrimble.kingme.device.record.RideRecordingService.RideRecordingBinder;
 import ftrimble.kingme.device.record.RecordingData;
@@ -29,6 +30,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -44,16 +48,20 @@ public class KingMe extends Activity {
     private static final String METRIC_DISTANCE_UNITS="km";
     private static final String STATUTE_DISTANCE_UNITS="mi";
     public final static float METERS_TO_MILES = 3.28084f/5280;
-    public final static float METERS_TO_KILOMETERS = 1000f;
+    public final static float METERS_TO_KILOMETERS = 1f/1000;
     public final static float MS_TO_SECONDS = 1.0f/1000;
     public final static int SECONDS_PER_MINUTE = 60;
     public final static int MINUTES_PER_HOUR = 60;
     public final static float MS_TO_MINUTES = MS_TO_SECONDS/60;
     public final static float MS_TO_HOURS = MS_TO_MINUTES/60;
 
-    private RideRecordingService mRecorder;
+    public final static String METRIC_SETTING_VALUE = "0";
+    public final static String STATUTE_SETTING_VALUE = "1";
+    public final static int RESULT_SETTINGS = 1;
 
     private SharedPreferences mPreferences;
+
+    private RideRecordingService mRecorder;
 
     private boolean mIsBound;
 
@@ -89,20 +97,18 @@ public class KingMe extends Activity {
                     float speedVal = rideData.getCurrentSpeed()/MS_TO_HOURS,
                         distanceVal = rideData.getDistanceTravelled();
                     String speedString, distanceString;
-                    if ( mPreferences.getInt("units_category_key",0) == 0 ) {
-                        speed.setText(String.format
-                                      ("%1.2f%s", speedVal*METERS_TO_MILES,
-                                       STATUTE_SPEED_UNITS));
-                        distance.setText(String.format
-                                         ("%1.2f%s", distanceVal*METERS_TO_MILES,
-                                          STATUTE_DISTANCE_UNITS));
+                    if ( mPreferences.getString("units_category_key",
+                                                METRIC_SETTING_VALUE) ==
+                         STATUTE_SETTING_VALUE ) {
+                        speed.setText
+                            (String.format("%1.2f", speedVal*METERS_TO_MILES));
+                        distance.setText
+                            (String.format("%1.2f", distanceVal*METERS_TO_MILES));
                     } else {
-                        speed.setText(String.format
-                                      ("%1.2f%s", speedVal*METERS_TO_KILOMETERS,
-                                       METRIC_SPEED_UNITS));
-                        distance.setText(String.format
-                                         ("%1.2f%s", distanceVal*METERS_TO_KILOMETERS,
-                                          METRIC_DISTANCE_UNITS));
+                        speed.setText
+                            (String.format("%1.2f", speedVal*METERS_TO_KILOMETERS));
+                        distance.setText
+                            (String.format("%1.2f", distanceVal*METERS_TO_KILOMETERS));
                     }
                     int timeInMS = rideData.getElapsedTime();
                     time.setText(String.format
@@ -127,8 +133,52 @@ public class KingMe extends Activity {
         };
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch ( item.getItemId() ) {
+        case R.id.settings:
+            startActivityForResult(new Intent(this, KingMeSettings.class),
+                                   RESULT_SETTINGS);
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode,resultCode,data);
+
+        switch ( requestCode ) {
+        case RESULT_SETTINGS:
+            convertUnits();
+        }
+    }
+
+    public void convertUnits() {
+        TextView speedUnits = (TextView) findViewById(R.id.speed_units),
+            distanceUnits = (TextView) findViewById(R.id.distance_units);
+        if ( mPreferences.getString("units_category_key",
+                                    METRIC_SETTING_VALUE) ==
+             STATUTE_SETTING_VALUE ) {
+            speedUnits.setText(getResources().getString(R.string.speed_units_statute));
+            distanceUnits.setText(getResources().getString(R.string.distance_units_statute));
+        } else {
+            speedUnits.setText(getResources().getString(R.string.speed_units_metric));
+            distanceUnits.setText(getResources().getString(R.string.distance_units_metric));
+        }
+    }
+
+    @Override
     public void onStart() {
         super.onStart();
+        mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         Intent intent = new Intent(KingMe.this,RideRecordingService.class);
         bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
@@ -137,9 +187,9 @@ public class KingMe extends Activity {
     @Override
     public void onResume() {
         super.onResume();
+        mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         registerReceiver(mReceiver,
                          new IntentFilter(RideRecordingService.BROADCAST));
-        mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
     }
 
     @Override

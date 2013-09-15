@@ -12,6 +12,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="ftrimble.kingme.device.preferences.KingMeSettings" />
         <service android:name="ftrimble.kingme.device.record.RideRecordingService"
                  android:exported="false" />
     </application>

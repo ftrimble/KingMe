@@ -53,6 +53,9 @@ public class RideRecordingService
     public static final String RIDE_DATA = "ride_data";
     public static final String BROADCAST = "ftrimble.kingme.device.KingMe";
 
+    private static final long MAX_TIME_BETWEEN_REQUESTS = 1000;
+    private static final long MIN_TIME_BETWEEN_REQUESTS = 500;
+
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mNotificationBuilder;
 
@@ -84,9 +87,9 @@ public class RideRecordingService
     @Override
     public void onCreate() {
         mLocationRequest = LocationRequest.create();
-        mLocationRequest.setInterval(1000);
+        mLocationRequest.setInterval(MAX_TIME_BETWEEN_REQUESTS);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        mLocationRequest.setFastestInterval(500);
+        mLocationRequest.setFastestInterval(MIN_TIME_BETWEEN_REQUESTS);
 
         mLocationClient = new LocationClient(getApplicationContext(),this,this);
         mLocationClient.connect();
@@ -94,8 +97,8 @@ public class RideRecordingService
         mNotificationManager =
             (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         mNotificationBuilder =  new NotificationCompat.Builder(this)
-            .setContentTitle("King Me")
-            .setContentText("Recording Started")
+            .setContentTitle(getResources().getString(R.string.app_name))
+            .setContentText(getResources().getString(R.string.recording_service_started))
             .setSmallIcon(R.drawable.ic_launcher)
             .setOngoing(true);
     }

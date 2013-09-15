@@ -5,6 +5,6 @@
       android:title="@string/units_category"
       android:dialogTitle="@string/units_dialog"
       android:entries="@array/units"
-      android:entryValues="@array/units_values"
+      android:entryValues="@array/unitsValues"
       android:defaultValue="@integer/units_default" />
 </PreferenceScreen>
