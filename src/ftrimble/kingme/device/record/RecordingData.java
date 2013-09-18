@@ -118,6 +118,7 @@ public class RecordingData implements Parcelable {
         mDistanceTravelled += distanceDiff;
 
         // update speeds (in meters / ms)
+        // TODO investigate using a trailing average, perhaps of three speeds?
         mCurrentSpeed = (float) (distanceDiff / timeDiff);
         mMaxSpeed = Math.max(mCurrentSpeed,mMaxSpeed);
     }

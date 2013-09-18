@@ -209,7 +209,7 @@ public class RideRecordingService
             mRideFile.addSegment();
 
             mLapData.add(new RecordingData(mTime));
-        } else {
+        } else if ( mRideFile != null ) {
             mLocationClient.removeLocationUpdates(this);
             mNotificationManager.cancel(NOTIFICATION);
             mRideFile.endDocument();

@@ -30,6 +30,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuInflater;
@@ -83,7 +84,12 @@ public class KingMe extends Activity {
         };
 
 
-
+    /**
+     * This receiver will handle the information gathered by the recording
+     * service. Every time new information is gathered in the service and
+     * the user is in the application, this will refresh the views to show
+     * the impact of the new data.
+     */
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -91,15 +97,17 @@ public class KingMe extends Activity {
                 if ( bundle != null ) {
                     RecordingData rideData = (RecordingData)
                         bundle.get(RideRecordingService.RIDE_DATA);
+                    // TODO use settings based refreshing.
                     TextView speed = (TextView) findViewById(R.id.speed_value),
                         distance = (TextView) findViewById(R.id.distance_value),
                         time = (TextView) findViewById(R.id.time_value);
                     float speedVal = rideData.getCurrentSpeed()/MS_TO_HOURS,
                         distanceVal = rideData.getDistanceTravelled();
                     String speedString, distanceString;
-                    if ( mPreferences.getString("units_category_key",
-                                                METRIC_SETTING_VALUE) ==
-                         STATUTE_SETTING_VALUE ) {
+                    // update new data in preferred units
+                    if ( PreferenceManager.getDefaultSharedPreferences(context)
+                         .getString("units_category_key", METRIC_SETTING_VALUE)
+                         .equals(STATUTE_SETTING_VALUE) ) {
                         speed.setText
                             (String.format("%1.2f", speedVal*METERS_TO_MILES));
                         distance.setText
@@ -119,6 +127,9 @@ public class KingMe extends Activity {
             }
         };
 
+    /**
+     * Forges a connection between the ride recording service and the activity.
+     */
     private ServiceConnection mConnection = new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName className,
@@ -161,12 +172,16 @@ public class KingMe extends Activity {
         }
     }
 
+    /**
+     * Called when the settings units change. It will properly transition all
+     * units to those that should be used according to the settings.
+     */
     public void convertUnits() {
         TextView speedUnits = (TextView) findViewById(R.id.speed_units),
             distanceUnits = (TextView) findViewById(R.id.distance_units);
-        if ( mPreferences.getString("units_category_key",
-                                    METRIC_SETTING_VALUE) ==
-             STATUTE_SETTING_VALUE ) {
+        if ( PreferenceManager.getDefaultSharedPreferences(this)
+             .getString("units_category_key", METRIC_SETTING_VALUE)
+             .equals(STATUTE_SETTING_VALUE) ) {
             speedUnits.setText(getResources().getString(R.string.speed_units_statute));
             distanceUnits.setText(getResources().getString(R.string.distance_units_statute));
         } else {
@@ -174,6 +189,12 @@ public class KingMe extends Activity {
             distanceUnits.setText(getResources().getString(R.string.distance_units_metric));
         }
     }
+
+    /**************************************************************************/
+    /**************************************************************************/
+    /***** LIFECYCLE FUNCTIONS ************************************************/
+    /**************************************************************************/
+    /**************************************************************************/
 
     @Override
     public void onStart() {
