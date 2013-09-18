@@ -15,9 +15,11 @@
 package ftrimble.kingme.device.record;
 
 import ftrimble.kingme.device.file.KingMeGPX;
+import ftrimble.kingme.device.KingMe;
 import ftrimble.kingme.device.R;
 
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.location.Location;
@@ -26,6 +28,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationCompat.Builder;
+import android.support.v4.app.TaskStackBuilder;
 import android.text.format.Time;
 import android.util.Log;
 
@@ -94,13 +97,20 @@ public class RideRecordingService
         mLocationClient = new LocationClient(getApplicationContext(),this,this);
         mLocationClient.connect();
 
+        PendingIntent resultPendingIntent =
+            TaskStackBuilder.create(this)
+            .addParentStack(KingMe.class)
+            .addNextIntent(new Intent(this, KingMe.class))
+            .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+
         mNotificationManager =
             (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         mNotificationBuilder =  new NotificationCompat.Builder(this)
             .setContentTitle(getResources().getString(R.string.app_name))
             .setContentText(getResources().getString(R.string.recording_service_started))
             .setSmallIcon(R.drawable.ic_launcher)
-            .setOngoing(true);
+            .setOngoing(true)
+            .setContentIntent(resultPendingIntent);
     }
 
     /**
