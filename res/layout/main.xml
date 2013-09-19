@@ -1,106 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
-  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/all_data"
-                android:orientation="horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:orientation="vertical"
-                  android:id="@+id/speed_box"
-                  android:layout_weight="1"
-                  android:layout_width="0pt"
-                  android:layout_height="wrap_content">
-      <TextView android:layout_width="fill_parent"
-                android:gravity="center"
-                android:layout_height="8pt"
-                android:text="@string/curr_speed" />
-      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:id="@+id/speed_value_box"
-                    android:layout_weight="1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content">
-        <TextView android:id="@+id/speed_value"
-                  android:text="@string/curr_speed_default"
-                  android:textSize="35sp"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content" />
-        <TextView android:id="@+id/speed_units"
-                  android:lines="2"
-                  android:maxLines="2"
-                  android:text="@string/speed_units_statute"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content" />
-      </LinearLayout>
-    </LinearLayout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:orientation="vertical"
-                  android:id="@+id/dist_box"
-                  android:layout_weight="1"
-                  android:layout_width="0pt"
-                  android:layout_height="wrap_content">
-      <TextView android:layout_width="fill_parent"
-                android:layout_height="8pt"
-                android:gravity="center"
-                android:text="@string/distance" />
-      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:id="@+id/distance_value_box"
-                    android:layout_weight="1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content">
-        <TextView android:id="@+id/distance_value"
-                  android:textSize="35sp"
-                  android:text="@string/distance_default"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content" />
-        <TextView android:id="@+id/distance_units"
-                  android:lines="2"
-                  android:maxLines="2"
-                  android:text="@string/distance_units_statute"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content" />
-      </LinearLayout>
-    </LinearLayout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:orientation="vertical"
-                  android:id="@+id/time_box"
-                  android:layout_weight="1"
-                  android:layout_width="0pt"
-                  android:layout_height="wrap_content">
-      <TextView android:layout_width="wrap_content"
-                android:gravity="center"
-                android:layout_height="8pt"
-                android:text="@string/elapsed_time" />
-      <TextView android:id="@+id/time_value"
-                android:gravity="center"
-                android:textSize="35sp"
-                android:text="@string/elapsed_time_default"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-    </LinearLayout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kingme="http://schemas.android.com/apk/res/ftrimble.kingme.device"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:kingme="http://schemas.android.com/apk/res/ftrimble.kingme.device"
+      android:id="@+id/all_data"
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="0pt"
+      android:layout_weight="1" >
+    <ftrimble.kingme.device.ui.DataView
+        android:id="@+id/speed_view"
+        android:layout_width="0pt"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        kingme:data_type="avg_speed"/>
+    <ftrimble.kingme.device.ui.DataView
+        android:id="@+id/distance_view"
+        android:layout_width="0pt"
+        android:layout_weight="1"
+        kingme:data_type="distance"
+        android:layout_height="wrap_content" />
+    <ftrimble.kingme.device.ui.DataView
+        android:id="@+id/time_view"
+        android:layout_width="0pt"
+        kingme:data_type="elapsed_time"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
   </LinearLayout>
-  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:orientation="horizontal"
-                android:id="@+id/buttons"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" >
-    <Button android:id="@+id/start_pause"
-            android:layout_weight="1"
-            android:layout_width="0pt"
-            android:layout_height="wrap_content"
-            android:text="@string/start_pause_text" />
-    <Button android:id="@+id/lap_reset"
-            android:layout_weight="1"
-            android:layout_width="0pt"
-            android:layout_height="wrap_content"
-            android:text="@string/lap_reset_text" />
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="horizontal"
+      android:id="@+id/buttons"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" >
+    <Button
+        android:id="@+id/start_pause"
+        android:layout_weight="1"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:text="@string/start_pause_text" />
+    <Button
+        android:id="@+id/lap_reset"
+        android:layout_weight="1"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:text="@string/lap_reset_text" />
   </LinearLayout>
 </LinearLayout>
 

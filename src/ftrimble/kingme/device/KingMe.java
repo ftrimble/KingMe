@@ -18,6 +18,7 @@ import ftrimble.kingme.device.preferences.KingMeSettings;
 import ftrimble.kingme.device.record.RideRecordingService;
 import ftrimble.kingme.device.record.RideRecordingService.RideRecordingBinder;
 import ftrimble.kingme.device.record.RecordingData;
+import ftrimble.kingme.device.ui.DataView;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -44,21 +45,11 @@ import java.lang.Math;
 
 public class KingMe extends Activity {
 
-    private static final String METRIC_SPEED_UNITS="kmh";
-    private static final String STATUTE_SPEED_UNITS="mph";
-    private static final String METRIC_DISTANCE_UNITS="km";
-    private static final String STATUTE_DISTANCE_UNITS="mi";
-    public final static float METERS_TO_MILES = 3.28084f/5280;
-    public final static float METERS_TO_KILOMETERS = 1f/1000;
-    public final static float MS_TO_SECONDS = 1.0f/1000;
-    public final static int SECONDS_PER_MINUTE = 60;
-    public final static int MINUTES_PER_HOUR = 60;
-    public final static float MS_TO_MINUTES = MS_TO_SECONDS/60;
-    public final static float MS_TO_HOURS = MS_TO_MINUTES/60;
+    // enum values for the units type
+    private static final String METRIC_SETTING_VALUE = "0";
+    private static final String STATUTE_SETTING_VALUE = "1";
 
-    public final static String METRIC_SETTING_VALUE = "0";
-    public final static String STATUTE_SETTING_VALUE = "1";
-    public final static int RESULT_SETTINGS = 1;
+    private static final int RESULT_SETTINGS = 1;
 
     private SharedPreferences mPreferences;
 
@@ -98,31 +89,12 @@ public class KingMe extends Activity {
                     RecordingData rideData = (RecordingData)
                         bundle.get(RideRecordingService.RIDE_DATA);
                     // TODO use settings based refreshing.
-                    TextView speed = (TextView) findViewById(R.id.speed_value),
-                        distance = (TextView) findViewById(R.id.distance_value),
-                        time = (TextView) findViewById(R.id.time_value);
-                    float speedVal = rideData.getCurrentSpeed()/MS_TO_HOURS,
-                        distanceVal = rideData.getDistanceTravelled();
-                    String speedString, distanceString;
-                    // update new data in preferred units
-                    if ( PreferenceManager.getDefaultSharedPreferences(context)
-                         .getString("units_category_key", METRIC_SETTING_VALUE)
-                         .equals(STATUTE_SETTING_VALUE) ) {
-                        speed.setText
-                            (String.format("%1.2f", speedVal*METERS_TO_MILES));
-                        distance.setText
-                            (String.format("%1.2f", distanceVal*METERS_TO_MILES));
-                    } else {
-                        speed.setText
-                            (String.format("%1.2f", speedVal*METERS_TO_KILOMETERS));
-                        distance.setText
-                            (String.format("%1.2f", distanceVal*METERS_TO_KILOMETERS));
-                    }
-                    int timeInMS = rideData.getElapsedTime();
-                    time.setText(String.format
-                                 ("%d:%02d:%02d", Math.round(timeInMS*MS_TO_HOURS),
-                                  Math.round(timeInMS*MS_TO_MINUTES) % MINUTES_PER_HOUR,
-                                  Math.round(timeInMS*MS_TO_SECONDS) % SECONDS_PER_MINUTE));
+                    DataView speed = (DataView) findViewById(R.id.speed_view),
+                        distance = (DataView) findViewById(R.id.distance_view),
+                        time = (DataView) findViewById(R.id.time_view);
+                    speed.updateData(rideData);
+                    distance.updateData(rideData);
+                    time.updateData(rideData);
                 }
             }
         };
@@ -168,25 +140,14 @@ public class KingMe extends Activity {
 
         switch ( requestCode ) {
         case RESULT_SETTINGS:
-            convertUnits();
-        }
-    }
-
-    /**
-     * Called when the settings units change. It will properly transition all
-     * units to those that should be used according to the settings.
-     */
-    public void convertUnits() {
-        TextView speedUnits = (TextView) findViewById(R.id.speed_units),
-            distanceUnits = (TextView) findViewById(R.id.distance_units);
-        if ( PreferenceManager.getDefaultSharedPreferences(this)
-             .getString("units_category_key", METRIC_SETTING_VALUE)
-             .equals(STATUTE_SETTING_VALUE) ) {
-            speedUnits.setText(getResources().getString(R.string.speed_units_statute));
-            distanceUnits.setText(getResources().getString(R.string.distance_units_statute));
-        } else {
-            speedUnits.setText(getResources().getString(R.string.speed_units_metric));
-            distanceUnits.setText(getResources().getString(R.string.distance_units_metric));
+            DataView speed = (DataView) findViewById(R.id.speed_view),
+                distance = (DataView) findViewById(R.id.distance_view),
+                time = (DataView) findViewById(R.id.time_view);
+            String units = PreferenceManager.getDefaultSharedPreferences(this)
+                .getString("units_category_key", METRIC_SETTING_VALUE);
+            speed.changeUnits(units);
+            distance.changeUnits(units);
+            time.changeUnits(units);
         }
     }
 

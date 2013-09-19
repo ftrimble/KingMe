@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DataView">
+        <attr name="data_type" format="integer" >
+          <enum name="avg_speed" value="0" />
+          <enum name="instantaneous_speed" value="1" />
+          <enum name="lap_speed" value="2" />
+          <enum name="distance" value="3" />
+          <enum name="lap_distance" value="4" />
+          <enum name="elapsed_time" value="5" />
+          <enum name="ride_time" value="6" />
+          <enum name="lap_time" value="7" />
+        </attr>
+    </declare-styleable>
+</resources>
