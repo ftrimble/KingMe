@@ -88,6 +88,10 @@ public class DataView extends LinearLayout {
         mData = (TextView) childLayout.getChildAt(0);
         mUnits = (TextView) childLayout.getChildAt(1);
 
+        setNewDataGathered();
+    }
+
+    public void setNewDataGathered() {
         // populate default text
         if ( mDataGathered == AVERAGE_SPEED )
             mDescription.setText(getResources().getString(R.string.avg_speed));
