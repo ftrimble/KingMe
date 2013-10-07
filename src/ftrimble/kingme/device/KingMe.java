@@ -74,7 +74,6 @@ public class KingMe extends Activity {
             }
         };
 
-
     /**
      * This receiver will handle the information gathered by the recording
      * service. Every time new information is gathered in the service and

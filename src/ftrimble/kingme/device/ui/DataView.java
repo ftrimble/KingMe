@@ -48,11 +48,11 @@ public class DataView extends LinearLayout {
     private static final String STATUTE_DISTANCE_UNITS="mi";
     private static final float METERS_TO_MILES = 3.28084f/5280;
     private static final float METERS_TO_KILOMETERS = 1f/1000;
-    private static final float MS_TO_SECONDS = 1.0f/1000;
-    private static final int SECONDS_PER_MINUTE = 60;
-    private static final int MINUTES_PER_HOUR = 60;
-    private static final float MS_TO_MINUTES = MS_TO_SECONDS/60;
-    private static final float MS_TO_HOURS = MS_TO_MINUTES/60;
+    private static final float MS_TO_SECS = 1.0f/1000;
+    private static final int SECS_PER_MIN = 60;
+    private static final int MINS_PER_HOUR = 60;
+    private static final float MS_TO_MINS = MS_TO_SECS/60;
+    private static final float MS_TO_HOURS = MS_TO_MINS/60;
 
 
     // Views contained in the layout
@@ -75,7 +75,9 @@ public class DataView extends LinearLayout {
         TypedArray a = context.obtainStyledAttributes
             (attrs,R.styleable.DataView, 0, 0);
 
-        mDataGathered = a.getInt(R.styleable.DataView_data_type,0);
+        setNewDataGathered(a.getInt(R.styleable.DataView_data_type,0),
+                           PreferenceManager.getDefaultSharedPreferences(context)
+                           .getString("units_category_key",METRIC_SETTING_VALUE));
 
         setOrientation(LinearLayout.VERTICAL);
 
@@ -88,10 +90,11 @@ public class DataView extends LinearLayout {
         mData = (TextView) childLayout.getChildAt(0);
         mUnits = (TextView) childLayout.getChildAt(1);
 
-        setNewDataGathered();
     }
 
-    public void setNewDataGathered() {
+    public void setNewDataGathered(int newDataGathered, String units) {
+        mDataGathered = newDataGathered;
+
         // populate default text
         if ( mDataGathered == AVERAGE_SPEED )
             mDescription.setText(getResources().getString(R.string.avg_speed));
@@ -122,39 +125,42 @@ public class DataView extends LinearLayout {
                   mDataGathered == LAP_TIME ) {
             mData.setText(getResources().getString(R.string.time_default));
         }
-        changeUnits(PreferenceManager.getDefaultSharedPreferences(context)
-                    .getString("units_category_key",METRIC_SETTING_VALUE));
+        changeUnits(units);
     }
 
     public void changeUnits(String newUnit) {
         if ( newUnit.equals(METRIC_SETTING_VALUE) ) {
             mDistanceConversion = METERS_TO_KILOMETERS;
-            mSpeedConversion = METERS_TO_KILOMETERS*MS_TO_SECONDS;
+            mSpeedConversion = METERS_TO_KILOMETERS*MS_TO_SECS;
             switch ( mDataGathered ) {
             case AVERAGE_SPEED:
             case INSTANTANEOUS_SPEED:
             case LAP_SPEED:
-                mUnits.setText(getResources().getString(R.string.speed_units_metric));
+                mUnits.setText(getResources()
+                               .getString(R.string.speed_units_metric));
                 break;
             case DISTANCE:
             case LAP_DISTANCE:
-                mUnits.setText(getResources().getString(R.string.distance_units_metric));
+                mUnits.setText(getResources()
+                               .getString(R.string.distance_units_metric));
                 break;
             default: break;
             }
         }
         else {
             mDistanceConversion = METERS_TO_MILES;
-            mSpeedConversion = METERS_TO_MILES/MS_TO_SECONDS;
+            mSpeedConversion = METERS_TO_MILES/MS_TO_SECS;
             switch ( mDataGathered ) {
             case AVERAGE_SPEED:
             case INSTANTANEOUS_SPEED:
             case LAP_SPEED:
-                mUnits.setText(getResources().getString(R.string.speed_units_statute));
+                mUnits.setText(getResources()
+                               .getString(R.string.speed_units_statute));
                 break;
             case DISTANCE:
             case LAP_DISTANCE:
-                mUnits.setText(getResources().getString(R.string.distance_units_statute));
+                mUnits.setText(getResources()
+                               .getString(R.string.distance_units_statute));
                 break;
             default: break;
             }
@@ -169,7 +175,8 @@ public class DataView extends LinearLayout {
             float speed = 0;
             if ( mDataGathered == AVERAGE_SPEED )
                 speed = data.getDistanceTravelled()/data.getRideTime();
-            else if ( mDataGathered == INSTANTANEOUS_SPEED ) speed = data.getCurrentSpeed();
+            else if ( mDataGathered == INSTANTANEOUS_SPEED )
+                speed = data.getCurrentSpeed();
             else if ( mDataGathered == LAP_SPEED ) speed = 0;
             mData.setText(String.format("%1.2f",speed*mSpeedConversion));
             break;
@@ -190,8 +197,8 @@ public class DataView extends LinearLayout {
             mData.setText
                 (String.format("%d:%02d:%02d",
                                Math.round(timeInMS*MS_TO_HOURS),
-                               Math.round(timeInMS*MS_TO_MINUTES) % MINUTES_PER_HOUR,
-                               Math.round(timeInMS*MS_TO_SECONDS) % SECONDS_PER_MINUTE));
+                               Math.round(timeInMS*MS_TO_MINS) % MINS_PER_HOUR,
+                               Math.round(timeInMS*MS_TO_SECS) % SECS_PER_MIN));
             break;
         default: return;
         }
