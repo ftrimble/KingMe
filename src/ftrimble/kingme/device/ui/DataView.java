@@ -22,6 +22,7 @@ import android.content.res.TypedArray;
 import android.preference.PreferenceManager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -38,21 +39,21 @@ public class DataView extends LinearLayout {
     public static final int LAP_TIME = 7;
 
     // enum values for the units type
-    private static final String METRIC_SETTING_VALUE = "0";
-    private static final String STATUTE_SETTING_VALUE = "1";
+    public static final String METRIC_SETTING_VALUE = "0";
+    public static final String STATUTE_SETTING_VALUE = "1";
 
     // useful conversions
-    private static final String METRIC_SPEED_UNITS="kmh";
-    private static final String STATUTE_SPEED_UNITS="mph";
-    private static final String METRIC_DISTANCE_UNITS="km";
-    private static final String STATUTE_DISTANCE_UNITS="mi";
-    private static final float METERS_TO_MILES = 3.28084f/5280;
-    private static final float METERS_TO_KILOMETERS = 1f/1000;
-    private static final float MS_TO_SECS = 1.0f/1000;
-    private static final int SECS_PER_MIN = 60;
-    private static final int MINS_PER_HOUR = 60;
-    private static final float MS_TO_MINS = MS_TO_SECS/60;
-    private static final float MS_TO_HOURS = MS_TO_MINS/60;
+    public static final String METRIC_SPEED_UNITS="kmh";
+    public static final String STATUTE_SPEED_UNITS="mph";
+    public static final String METRIC_DISTANCE_UNITS="km";
+    public static final String STATUTE_DISTANCE_UNITS="mi";
+    public static final float METERS_TO_MILES = 3.28084f/5280;
+    public static final float METERS_TO_KILOMETERS = 1f/1000;
+    public static final float MS_TO_SECS = 1.0f/1000;
+    public static final int SECS_PER_MIN = 60;
+    public static final int MINS_PER_HOUR = 60;
+    public static final float MS_TO_MINS = MS_TO_SECS/60;
+    public static final float MS_TO_HOURS = MS_TO_MINS/60;
 
 
     // Views contained in the layout
@@ -75,9 +76,9 @@ public class DataView extends LinearLayout {
         TypedArray a = context.obtainStyledAttributes
             (attrs,R.styleable.DataView, 0, 0);
 
-        setNewDataGathered(a.getInt(R.styleable.DataView_data_type,0),
-                           PreferenceManager.getDefaultSharedPreferences(context)
-                           .getString("units_category_key",METRIC_SETTING_VALUE));
+        setNewDataGathered(a.getInt(R.styleable.DataView_data_type,0));
+        changeUnits(PreferenceManager.getDefaultSharedPreferences(context)
+                    .getString("units_category_key",METRIC_SETTING_VALUE));
 
         setOrientation(LinearLayout.VERTICAL);
 
@@ -90,9 +91,17 @@ public class DataView extends LinearLayout {
         mData = (TextView) childLayout.getChildAt(0);
         mUnits = (TextView) childLayout.getChildAt(1);
 
+        this.setOnLongClickListener(new OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    setNewDataGathered((mDataGathered+1)%8);
+                    return true;
+                }
+            });
+
     }
 
-    public void setNewDataGathered(int newDataGathered, String units) {
+    public void setNewDataGathered(int newDataGathered) {
         mDataGathered = newDataGathered;
 
         // populate default text
@@ -125,7 +134,6 @@ public class DataView extends LinearLayout {
                   mDataGathered == LAP_TIME ) {
             mData.setText(getResources().getString(R.string.time_default));
         }
-        changeUnits(units);
     }
 
     public void changeUnits(String newUnit) {
