@@ -9,7 +9,7 @@ _An Android application for exploring, training, and competing using GPS data
 
 - Strava
 
-  Strava is an excellent website for competition; this may even be a valid 
+  Strava is an excellent website for competition; this may even be a valid
   endpoint for the data we collect, at least preliminarily. However, their app
   leaves much to be desired - it does not allow you to navigate along a course,
   track your progress against a segment, or any such information. Instead, it
@@ -24,7 +24,7 @@ _An Android application for exploring, training, and competing using GPS data
 
   Garmin covers the opposite end of the spectrum; where strava has a superb web
   interface for consolidating your data and tracking your progress, Garmin
-  lacks.However, it is the only dedicated cycling gps device available, and it
+  lacks. However, it is the only dedicated cycling gps device available, and it
   is leaps and bounds ahead of any similar concept. Unfortunately, they exploit
   their monopoly here, and charge exorbitant prices for their devices. By
   providing the same functionality integrated into a phone, we can reach a
@@ -49,6 +49,10 @@ Garmin Edge, a few features are necessary.
     - Course repositories
     - Course ratings
     - For circuits, allow the user to start anywhere along the course
+    - when following a course, it should find all the segments that the course
+      goes through, and give you warning 30 seconds before you get to the
+      segment. Once you hit the segment, it should give you real time updates
+      in a virtual partner format against the segment leader.
 
 - Segments:
 
