@@ -1,0 +1,12 @@
+<%- model_class = Ride -%>
+
+<% if current_user %>
+
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+<%= render :partial => 'form' %>
+
+<% else %>
+<h1> You have to create an account before you can add your own rides! </h1>
+<% end %>
