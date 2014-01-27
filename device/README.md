@@ -1,37 +1,10 @@
-# King-Me
+# King Me
 
 
 _An Android application for exploring, training, and competing using GPS data
     for bicycling._
 
-## Competition
-
-
-- Strava
-
-  Strava is an excellent website for competition; this may even be a valid
-  endpoint for the data we collect, at least preliminarily. However, their app
-  leaves much to be desired - it does not allow you to navigate along a course,
-  track your progress against a segment, or any such information. Instead, it
-  tracks only speed, distance, and time.
-
-- Other websites
-
-  There are various other websites which are similar to strava, but as far as
-  I can tell, none realy compare.
-
-- Garmin
-
-  Garmin covers the opposite end of the spectrum; where strava has a superb web
-  interface for consolidating your data and tracking your progress, Garmin
-  lacks. However, it is the only dedicated cycling gps device available, and it
-  is leaps and bounds ahead of any similar concept. Unfortunately, they exploit
-  their monopoly here, and charge exorbitant prices for their devices. By
-  providing the same functionality integrated into a phone, we can reach a
-  much greater audience. Additionally, their hardware is riddled with bugs,
-  which greatly detract from the experience.
-
-## Critical Points
+## Critical Features
 
 In order to develop a product which is capable of rivaling the power of the
 Garmin Edge, a few features are necessary.
