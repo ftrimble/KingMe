@@ -105,8 +105,11 @@ public class DataView extends LinearLayout {
         mDataGathered = newDataGathered;
 
         // populate default text
-        if ( mDataGathered == AVERAGE_SPEED )
+        if ( mDataGathered == AVERAGE_SPEED ) {
+            System.err.println("mDescription: " + mDescription);
+            System.err.println("getResources: " + getResources());
             mDescription.setText(getResources().getString(R.string.avg_speed));
+        }
         else if ( mDataGathered == INSTANTANEOUS_SPEED )
             mDescription.setText(getResources().getString(R.string.curr_speed));
         else if ( mDataGathered == LAP_SPEED )

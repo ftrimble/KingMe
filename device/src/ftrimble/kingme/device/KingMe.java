@@ -46,7 +46,7 @@ import java.lang.Math;
 import org.mapsforge.android.maps.MapActivity;
 import org.mapsforge.android.maps.MapView;
 
-public class KingMe extends MapActivity {
+public class KingMe extends Activity {
 
     // enum values for the units type
     private static final String METRIC_SETTING_VALUE = "0";
@@ -102,7 +102,7 @@ public class KingMe extends MapActivity {
         };
 
     /**
-     * Forges a connection between the ride recording service and the activity.
+     * forges a connection between the ride recording service and the activity.
      */
     private ServiceConnection mConnection = new ServiceConnection() {
             @Override
