@@ -76,10 +76,6 @@ public class DataView extends LinearLayout {
         TypedArray a = context.obtainStyledAttributes
             (attrs,R.styleable.DataView, 0, 0);
 
-        setNewDataGathered(a.getInt(R.styleable.DataView_data_type,0));
-        changeUnits(PreferenceManager.getDefaultSharedPreferences(context)
-                    .getString("units_category_key",METRIC_SETTING_VALUE));
-
         setOrientation(LinearLayout.VERTICAL);
 
         LayoutInflater inflater = (LayoutInflater) context
@@ -90,6 +86,10 @@ public class DataView extends LinearLayout {
         LinearLayout childLayout = (LinearLayout) getChildAt(1);
         mData = (TextView) childLayout.getChildAt(0);
         mUnits = (TextView) childLayout.getChildAt(1);
+
+        setNewDataGathered(a.getInt(R.styleable.DataView_data_type,0));
+        changeUnits(PreferenceManager.getDefaultSharedPreferences(context)
+                    .getString("units_category_key",METRIC_SETTING_VALUE));
 
         this.setOnLongClickListener(new OnLongClickListener() {
                 @Override
@@ -106,8 +106,6 @@ public class DataView extends LinearLayout {
 
         // populate default text
         if ( mDataGathered == AVERAGE_SPEED ) {
-            System.err.println("mDescription: " + mDescription);
-            System.err.println("getResources: " + getResources());
             mDescription.setText(getResources().getString(R.string.avg_speed));
         }
         else if ( mDataGathered == INSTANTANEOUS_SPEED )
