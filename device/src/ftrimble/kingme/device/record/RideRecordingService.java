@@ -144,7 +144,7 @@ public class RideRecordingService
         // start a Google Play services activity that can resolve
         // error.
         if (connectionResult.hasResolution()) {
-            /* TODO Start an Activity that tries to resolve the error
+            // TODO Start an Activity that tries to resolve the error
             try {
                 connectionResult.startResolutionForResult
                     (this, CONNECTION_FAILURE_RESOLUTION_REQUEST);
