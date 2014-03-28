@@ -107,7 +107,8 @@ public class RideRecordingService
             (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         mNotificationBuilder =  new NotificationCompat.Builder(this)
             .setContentTitle(getResources().getString(R.string.app_name))
-            .setContentText(getResources().getString(R.string.recording_service_started))
+            .setContentText(getResources().getString
+                            (R.string.recording_service_started))
             .setSmallIcon(R.drawable.ic_launcher)
             .setOngoing(true)
             .setContentIntent(resultPendingIntent);
@@ -143,6 +144,7 @@ public class RideRecordingService
         // If the error has a resolution, try sending an Intent to
         // start a Google Play services activity that can resolve
         // error.
+        /*
         if (connectionResult.hasResolution()) {
             // TODO Start an Activity that tries to resolve the error
             try {
@@ -153,10 +155,10 @@ public class RideRecordingService
                 // PendingIntent; Log the error
                 e.printStackTrace();
             }
-            */
         } else {
             // TODO do something if no resolution is available
         }
+        */
     }
 
     /**
