@@ -1,0 +1,1738 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.15.6" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2010-02-25T20:16:52Z</time>
+    <bounds maxlat="42.6127911" maxlon="-71.3532829" minlat="42.4767065" minlon="-71.4601851"/>
+  </metadata>
+
+  <wpt lat="42.4778226" lon="-71.4130278">
+    <time>2010-02-25T16:58:26Z</time>
+    <name>S/F - Bagels Plus</name>
+    <cmt>98 Great Rd</cmt>
+    <desc>98 Great Rd</desc>
+    <sym>Bike Trail</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <rte>
+    <name>Bagel 22</name>
+    <extensions>
+      <gpxx:RouteExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="42.4778226" lon="-71.4130278">
+      <time>2010-02-25T16:58:26Z</time>
+      <name>S/F - Bagels Plus</name>
+      <cmt>98 Great Rd</cmt>
+      <desc>98 Great Rd</desc>
+      <sym>Bike Trail</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+          <gpxx:rpt lat="42.4778226" lon="-71.4130277">
+            <gpxx:Subclass>0300E2304C0071A401002116000055010F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4780369" lon="-71.4133644">
+            <gpxx:Subclass>0500E2304C00B0FD05001F062E0069805303</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4779081" lon="-71.4136648"/>
+          <gpxx:rpt lat="42.4779940" lon="-71.4153814"/>
+          <gpxx:rpt lat="42.4780798" lon="-71.4167547"/>
+          <gpxx:rpt lat="42.4784660" lon="-71.4217758"/>
+          <gpxx:rpt lat="42.4786377" lon="-71.4232349"/>
+          <gpxx:rpt lat="42.4788523" lon="-71.4259386"/>
+          <gpxx:rpt lat="42.4790239" lon="-71.4263248"/>
+          <gpxx:rpt lat="42.4793243" lon="-71.4266682"/>
+          <gpxx:rpt lat="42.4793243" lon="-71.4266682"/>
+          <gpxx:rpt lat="42.4800539" lon="-71.4272261"/>
+          <gpxx:rpt lat="42.4810410" lon="-71.4279127"/>
+          <gpxx:rpt lat="42.4815130" lon="-71.4282990"/>
+          <gpxx:rpt lat="42.4821568" lon="-71.4290285"/>
+          <gpxx:rpt lat="42.4821568" lon="-71.4290285"/>
+          <gpxx:rpt lat="42.4837017" lon="-71.4309168"/>
+          <gpxx:rpt lat="42.4847746" lon="-71.4325905"/>
+          <gpxx:rpt lat="42.4850750" lon="-71.4330196"/>
+          <gpxx:rpt lat="42.4852037" lon="-71.4334059"/>
+          <gpxx:rpt lat="42.4852467" lon="-71.4340496">
+            <gpxx:Subclass>0500E2304C000CD80D001F022E00987E1801</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4866199" lon="-71.4364100"/>
+          <gpxx:rpt lat="42.4866199" lon="-71.4364100"/>
+          <gpxx:rpt lat="42.4872208" lon="-71.4373541"/>
+          <gpxx:rpt lat="42.4886370" lon="-71.4397144"/>
+          <gpxx:rpt lat="42.4886370" lon="-71.4397144"/>
+          <gpxx:rpt lat="42.4890232" lon="-71.4404869">
+            <gpxx:Subclass>0500E2304C000CD80D001F00250028C65400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4897099" lon="-71.4419889"/>
+          <gpxx:rpt lat="42.4900146" lon="-71.4425113">
+            <gpxx:Subclass>0500E2304C000CD80D00211700006E010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.4900146" lon="-71.4425115">
+      <time>2010-02-25T15:43:11Z</time>
+      <name>69 Newtown Rd</name>
+      <cmt>69 Newtown Rd</cmt>
+      <desc>69 Newtown Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C000CD80D00018004009F530000</gpxx:Subclass>
+          <gpxx:rpt lat="42.4900146" lon="-71.4425113">
+            <gpxx:Subclass>0500E2304C000CD80D00211600006E011600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4903107" lon="-71.4430189">
+            <gpxx:Subclass>0500E2304C000CD80D001F0025007EC5BC02</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4908686" lon="-71.4437914"/>
+          <gpxx:rpt lat="42.4908686" lon="-71.4437914"/>
+          <gpxx:rpt lat="42.4931002" lon="-71.4470100"/>
+          <gpxx:rpt lat="42.4937439" lon="-71.4480829"/>
+          <gpxx:rpt lat="42.4943447" lon="-71.4491129"/>
+          <gpxx:rpt lat="42.4952459" lon="-71.4509583"/>
+          <gpxx:rpt lat="42.4952459" lon="-71.4509583"/>
+          <gpxx:rpt lat="42.4957609" lon="-71.4520311"/>
+          <gpxx:rpt lat="42.4965334" lon="-71.4530182"/>
+          <gpxx:rpt lat="42.4974775" lon="-71.4539623"/>
+          <gpxx:rpt lat="42.4987221" lon="-71.4554644"/>
+          <gpxx:rpt lat="42.5004387" lon="-71.4573956"/>
+          <gpxx:rpt lat="42.5006962" lon="-71.4576530">
+            <gpxx:Subclass>0600E2304C00A04408001F022500BFF4F200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5022411" lon="-71.4569664"/>
+          <gpxx:rpt lat="42.5035286" lon="-71.4562368"/>
+          <gpxx:rpt lat="42.5046015" lon="-71.4558077"/>
+          <gpxx:rpt lat="42.5049448" lon="-71.4555073"/>
+          <gpxx:rpt lat="42.5054355" lon="-71.4549301">
+            <gpxx:Subclass>0600E2304C00A044080021170000F2000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5054356" lon="-71.4549299">
+      <time>2010-02-25T15:43:19Z</time>
+      <name>88 Fort Pond Rd</name>
+      <cmt>88 Fort Pond Rd</cmt>
+      <desc>88 Fort Pond Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600E2304C00A0440800010000003BF20000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5054355" lon="-71.4549301">
+            <gpxx:Subclass>0600E2304C00A044080021160000F2001C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5056744" lon="-71.4546490"/>
+          <gpxx:rpt lat="42.5059319" lon="-71.4544773">
+            <gpxx:Subclass>0600E2304C00A04408001F002500FDF4C300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5061464" lon="-71.4540482"/>
+          <gpxx:rpt lat="42.5071764" lon="-71.4523745"/>
+          <gpxx:rpt lat="42.5087643" lon="-71.4503145">
+            <gpxx:Subclass>0600E2304C0060A10D001F06250094F53703</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5090647" lon="-71.4504433"/>
+          <gpxx:rpt lat="42.5094938" lon="-71.4504862"/>
+          <gpxx:rpt lat="42.5105238" lon="-71.4502287"/>
+          <gpxx:rpt lat="42.5116396" lon="-71.4505291"/>
+          <gpxx:rpt lat="42.5132275" lon="-71.4504862"/>
+          <gpxx:rpt lat="42.5133562" lon="-71.4505720"/>
+          <gpxx:rpt lat="42.5135708" lon="-71.4508724"/>
+          <gpxx:rpt lat="42.5139570" lon="-71.4518166"/>
+          <gpxx:rpt lat="42.5143003" lon="-71.4528894"/>
+          <gpxx:rpt lat="42.5145149" lon="-71.4534903"/>
+          <gpxx:rpt lat="42.5147295" lon="-71.4537907"/>
+          <gpxx:rpt lat="42.5150299" lon="-71.4540482"/>
+          <gpxx:rpt lat="42.5158453" lon="-71.4547348"/>
+          <gpxx:rpt lat="42.5161886" lon="-71.4549065"/>
+          <gpxx:rpt lat="42.5170469" lon="-71.4551640"/>
+          <gpxx:rpt lat="42.5178623" lon="-71.4552927"/>
+          <gpxx:rpt lat="42.5181627" lon="-71.4554214"/>
+          <gpxx:rpt lat="42.5200510" lon="-71.4569664"/>
+          <gpxx:rpt lat="42.5200510" lon="-71.4569664"/>
+          <gpxx:rpt lat="42.5223684" lon="-71.4585972"/>
+          <gpxx:rpt lat="42.5234413" lon="-71.4599705"/>
+          <gpxx:rpt lat="42.5236988" lon="-71.4601851">
+            <gpxx:Subclass>0500E2304C00EBD70D001F02250020F4FC00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5236988" lon="-71.4601851"/>
+          <gpxx:rpt lat="42.5239992" lon="-71.4597988"/>
+          <gpxx:rpt lat="42.5244284" lon="-71.4594126"/>
+          <gpxx:rpt lat="42.5249863" lon="-71.4591551"/>
+          <gpxx:rpt lat="42.5258017" lon="-71.4589834"/>
+          <gpxx:rpt lat="42.5263596" lon="-71.4589405"/>
+          <gpxx:rpt lat="42.5269175" lon="-71.4589834"/>
+          <gpxx:rpt lat="42.5279474" lon="-71.4594555"/>
+          <gpxx:rpt lat="42.5281620" lon="-71.4595413"/>
+          <gpxx:rpt lat="42.5288057" lon="-71.4596701">
+            <gpxx:Subclass>0500E2304C00EC3711001F022E002A8DC400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5288486" lon="-71.4594126"/>
+          <gpxx:rpt lat="42.5288916" lon="-71.4590693"/>
+          <gpxx:rpt lat="42.5290203" lon="-71.4587688"/>
+          <gpxx:rpt lat="42.5297499" lon="-71.4576530"/>
+          <gpxx:rpt lat="42.5308657" lon="-71.4561939"/>
+          <gpxx:rpt lat="42.5315523" lon="-71.4554214">
+            <gpxx:Subclass>0500E2304C00EC3711001F002500EBF44B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5325823" lon="-71.4546490"/>
+          <gpxx:rpt lat="42.5329249" lon="-71.4543064">
+            <gpxx:Subclass>0500E2304C00EC3711002117000011010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5329250" lon="-71.4543063">
+      <time>2010-02-25T15:43:31Z</time>
+      <name>27 Shaker Ln</name>
+      <cmt>27 Shaker Ln</cmt>
+      <desc>27 Shaker Ln</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C00EC37110001000300AF4A0000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5329249" lon="-71.4543064">
+            <gpxx:Subclass>0500E2304C00EC371100211600001101BF00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5330544" lon="-71.4541769"/>
+          <gpxx:rpt lat="42.5333977" lon="-71.4537048"/>
+          <gpxx:rpt lat="42.5338697" lon="-71.4522028"/>
+          <gpxx:rpt lat="42.5339556" lon="-71.4518166"/>
+          <gpxx:rpt lat="42.5339985" lon="-71.4496279"/>
+          <gpxx:rpt lat="42.5340843" lon="-71.4494133"/>
+          <gpxx:rpt lat="42.5342131" lon="-71.4492846">
+            <gpxx:Subclass>0300E2304C0030A501001F022E00C28D2B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5338268" lon="-71.4481258">
+            <gpxx:Subclass>0500E2304C007BA70F001F063000AED7E500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5380325" lon="-71.4447355">
+            <gpxx:Subclass>0500E2304C0082A60F001F002E001A8E0103</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5415516" lon="-71.4418173"/>
+          <gpxx:rpt lat="42.5420666" lon="-71.4413452"/>
+          <gpxx:rpt lat="42.5425816" lon="-71.4406586"/>
+          <gpxx:rpt lat="42.5439978" lon="-71.4388132"/>
+          <gpxx:rpt lat="42.5443411" lon="-71.4385128"/>
+          <gpxx:rpt lat="42.5453281" lon="-71.4378691"/>
+          <gpxx:rpt lat="42.5456285" lon="-71.4373970"/>
+          <gpxx:rpt lat="42.5462294" lon="-71.4368391"/>
+          <gpxx:rpt lat="42.5465298" lon="-71.4367104"/>
+          <gpxx:rpt lat="42.5468302" lon="-71.4366674"/>
+          <gpxx:rpt lat="42.5488043" lon="-71.4372683"/>
+          <gpxx:rpt lat="42.5505638" lon="-71.4372683"/>
+          <gpxx:rpt lat="42.5509071" lon="-71.4373112"/>
+          <gpxx:rpt lat="42.5513363" lon="-71.4375257"/>
+          <gpxx:rpt lat="42.5524521" lon="-71.4382553">
+            <gpxx:Subclass>0500E2304C00EE8401001F032E00838E1301</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5522804" lon="-71.4379120"/>
+          <gpxx:rpt lat="42.5518084" lon="-71.4364100"/>
+          <gpxx:rpt lat="42.5517654" lon="-71.4360237"/>
+          <gpxx:rpt lat="42.5518513" lon="-71.4352083"/>
+          <gpxx:rpt lat="42.5518513" lon="-71.4343500"/>
+          <gpxx:rpt lat="42.5516796" lon="-71.4329338"/>
+          <gpxx:rpt lat="42.5516796" lon="-71.4320755"/>
+          <gpxx:rpt lat="42.5518513" lon="-71.4311743"/>
+          <gpxx:rpt lat="42.5519371" lon="-71.4304876">
+            <gpxx:Subclass>0500E2304C00EE8401001F002500EAFD4F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5519800" lon="-71.4293289"/>
+          <gpxx:rpt lat="42.5517908" lon="-71.4282212">
+            <gpxx:Subclass>0500E2304C00EE84010021170000A9010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5517908" lon="-71.4282213">
+      <time>2010-02-25T15:43:58Z</time>
+      <name>213 Concord Rd</name>
+      <cmt>213 Concord Rd</cmt>
+      <desc>213 Concord Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C00EE8401000101040044680000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5517908" lon="-71.4282212">
+            <gpxx:Subclass>0500E2304C00EE84010021160000A9016800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5516796" lon="-71.4275694"/>
+          <gpxx:rpt lat="42.5515938" lon="-71.4271832"/>
+          <gpxx:rpt lat="42.5509501" lon="-71.4254236">
+            <gpxx:Subclass>0500E2304C00EE8401001F002500AFFED900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5505209" lon="-71.4235353"/>
+          <gpxx:rpt lat="42.5503492" lon="-71.4226770"/>
+          <gpxx:rpt lat="42.5503063" lon="-71.4216471"/>
+          <gpxx:rpt lat="42.5503063" lon="-71.4203596"/>
+          <gpxx:rpt lat="42.5504351" lon="-71.4192009">
+            <gpxx:Subclass>0500E2304C00BB550E001F002E000C905500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5508642" lon="-71.4167976">
+            <gpxx:Subclass>0600E2304C00C3550E001F002E0024906C04</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5509930" lon="-71.4164114"/>
+          <gpxx:rpt lat="42.5521517" lon="-71.4147806"/>
+          <gpxx:rpt lat="42.5524521" lon="-71.4143085"/>
+          <gpxx:rpt lat="42.5527096" lon="-71.4137506"/>
+          <gpxx:rpt lat="42.5528383" lon="-71.4131927"/>
+          <gpxx:rpt lat="42.5529671" lon="-71.4125061"/>
+          <gpxx:rpt lat="42.5530958" lon="-71.4121199"/>
+          <gpxx:rpt lat="42.5531387" lon="-71.4117765"/>
+          <gpxx:rpt lat="42.5530529" lon="-71.4110899"/>
+          <gpxx:rpt lat="42.5530958" lon="-71.4108753"/>
+          <gpxx:rpt lat="42.5540400" lon="-71.4095449"/>
+          <gpxx:rpt lat="42.5553703" lon="-71.4079571"/>
+          <gpxx:rpt lat="42.5556707" lon="-71.4075279"/>
+          <gpxx:rpt lat="42.5559711" lon="-71.4067984"/>
+          <gpxx:rpt lat="42.5561428" lon="-71.4064980"/>
+          <gpxx:rpt lat="42.5565290" lon="-71.4062405"/>
+          <gpxx:rpt lat="42.5567007" lon="-71.4061546"/>
+          <gpxx:rpt lat="42.5571299" lon="-71.4062405"/>
+          <gpxx:rpt lat="42.5574732" lon="-71.4061975"/>
+          <gpxx:rpt lat="42.5579453" lon="-71.4058113"/>
+          <gpxx:rpt lat="42.5582457" lon="-71.4048672"/>
+          <gpxx:rpt lat="42.5587177" lon="-71.4033222"/>
+          <gpxx:rpt lat="42.5587177" lon="-71.4033222"/>
+          <gpxx:rpt lat="42.5591898" lon="-71.4020348"/>
+          <gpxx:rpt lat="42.5594902" lon="-71.4014339"/>
+          <gpxx:rpt lat="42.5597906" lon="-71.4010906"/>
+          <gpxx:rpt lat="42.5603056" lon="-71.4005327"/>
+          <gpxx:rpt lat="42.5609064" lon="-71.4003181"/>
+          <gpxx:rpt lat="42.5617218" lon="-71.4003181"/>
+          <gpxx:rpt lat="42.5625372" lon="-71.4004040"/>
+          <gpxx:rpt lat="42.5640392" lon="-71.4005327"/>
+          <gpxx:rpt lat="42.5656271" lon="-71.3995886"/>
+          <gpxx:rpt lat="42.5667000" lon="-71.3994598"/>
+          <gpxx:rpt lat="42.5677729" lon="-71.3991594"/>
+          <gpxx:rpt lat="42.5682449" lon="-71.3986874">
+            <gpxx:Subclass>0600E2304C000B5A05001F002500A18FB700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5692320" lon="-71.3956404"/>
+          <gpxx:rpt lat="42.5694466" lon="-71.3946962"/>
+          <gpxx:rpt lat="42.5695324" lon="-71.3937092">
+            <gpxx:Subclass>0600E2304C0022CF0E001F002500E38FCB01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5694895" lon="-71.3931942"/>
+          <gpxx:rpt lat="42.5694895" lon="-71.3922930"/>
+          <gpxx:rpt lat="42.5695324" lon="-71.3911343"/>
+          <gpxx:rpt lat="42.5695753" lon="-71.3901472"/>
+          <gpxx:rpt lat="42.5696611" lon="-71.3880014"/>
+          <gpxx:rpt lat="42.5696611" lon="-71.3873577"/>
+          <gpxx:rpt lat="42.5697470" lon="-71.3864994"/>
+          <gpxx:rpt lat="42.5698328" lon="-71.3855124"/>
+          <gpxx:rpt lat="42.5698328" lon="-71.3848686"/>
+          <gpxx:rpt lat="42.5698328" lon="-71.3846970"/>
+          <gpxx:rpt lat="42.5698757" lon="-71.3834524"/>
+          <gpxx:rpt lat="42.5699186" lon="-71.3831091"/>
+          <gpxx:rpt lat="42.5699186" lon="-71.3831091"/>
+          <gpxx:rpt lat="42.5700045" lon="-71.3827658"/>
+          <gpxx:rpt lat="42.5702190" lon="-71.3823366"/>
+          <gpxx:rpt lat="42.5709915" lon="-71.3814354"/>
+          <gpxx:rpt lat="42.5712919" lon="-71.3809204">
+            <gpxx:Subclass>0600E2304C005D7D0C001F00250082918700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5714636" lon="-71.3803625"/>
+          <gpxx:rpt lat="42.5715494" lon="-71.3797617"/>
+          <gpxx:rpt lat="42.5715494" lon="-71.3792896"/>
+          <gpxx:rpt lat="42.5712919" lon="-71.3775301"/>
+          <gpxx:rpt lat="42.5713778" lon="-71.3771009">
+            <gpxx:Subclass>0500E2304C00B3F105001F002E00176D1900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5714636" lon="-71.3767147"/>
+          <gpxx:rpt lat="42.5715065" lon="-71.3763714">
+            <gpxx:Subclass>0500E2304C0047BE0F001F022E00366D1001</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5712490" lon="-71.3761997"/>
+          <gpxx:rpt lat="42.5706482" lon="-71.3759422"/>
+          <gpxx:rpt lat="42.5703907" lon="-71.3757277"/>
+          <gpxx:rpt lat="42.5703049" lon="-71.3755131"/>
+          <gpxx:rpt lat="42.5702190" lon="-71.3741827"/>
+          <gpxx:rpt lat="42.5700474" lon="-71.3733673"/>
+          <gpxx:rpt lat="42.5697470" lon="-71.3729382"/>
+          <gpxx:rpt lat="42.5686741" lon="-71.3719940"/>
+          <gpxx:rpt lat="42.5684595" lon="-71.3717365"/>
+          <gpxx:rpt lat="42.5682020" lon="-71.3712215"/>
+          <gpxx:rpt lat="42.5681591" lon="-71.3707495">
+            <gpxx:Subclass>0500E2304C000CBE0F001F002E007A6D7E00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5684595" lon="-71.3692904"/>
+          <gpxx:rpt lat="42.5686312" lon="-71.3681746"/>
+          <gpxx:rpt lat="42.5686312" lon="-71.3676596"/>
+          <gpxx:rpt lat="42.5684595" lon="-71.3671446">
+            <gpxx:Subclass>0500E2304C000CBE0F001F002E00F36D4A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5680304" lon="-71.3662863"/>
+          <gpxx:rpt lat="42.5674725" lon="-71.3655567"/>
+          <gpxx:rpt lat="42.5674539" lon="-71.3655072">
+            <gpxx:Subclass>0500E2304C000CBE0F002117000022000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5674539" lon="-71.3655072">
+      <time>2010-02-25T16:56:05Z</time>
+      <name>87 Proctor Rd</name>
+      <cmt>87 Proctor Rd</cmt>
+      <desc>87 Proctor Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C000CBE0F0001000000C4210000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5674539" lon="-71.3655072">
+            <gpxx:Subclass>0500E2304C000CBE0F002116000022002200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5673437" lon="-71.3652134"/>
+          <gpxx:rpt lat="42.5672579" lon="-71.3645697">
+            <gpxx:Subclass>0500E2304C0035BE0F001F002E000C6EF701</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5671721" lon="-71.3637114"/>
+          <gpxx:rpt lat="42.5668716" lon="-71.3625956"/>
+          <gpxx:rpt lat="42.5667858" lon="-71.3614798"/>
+          <gpxx:rpt lat="42.5659704" lon="-71.3604069"/>
+          <gpxx:rpt lat="42.5659704" lon="-71.3604069"/>
+          <gpxx:rpt lat="42.5658417" lon="-71.3602352"/>
+          <gpxx:rpt lat="42.5651979" lon="-71.3598061"/>
+          <gpxx:rpt lat="42.5651979" lon="-71.3598061"/>
+          <gpxx:rpt lat="42.5647259" lon="-71.3594198"/>
+          <gpxx:rpt lat="42.5643396" lon="-71.3589048"/>
+          <gpxx:rpt lat="42.5641680" lon="-71.3585615"/>
+          <gpxx:rpt lat="42.5639963" lon="-71.3581324"/>
+          <gpxx:rpt lat="42.5638676" lon="-71.3575745"/>
+          <gpxx:rpt lat="42.5637817" lon="-71.3561153"/>
+          <gpxx:rpt lat="42.5636530" lon="-71.3553858"/>
+          <gpxx:rpt lat="42.5633955" lon="-71.3551283"/>
+          <gpxx:rpt lat="42.5623226" lon="-71.3546562"/>
+          <gpxx:rpt lat="42.5619793" lon="-71.3544846"/>
+          <gpxx:rpt lat="42.5615931" lon="-71.3540983"/>
+          <gpxx:rpt lat="42.5614214" lon="-71.3537550">
+            <gpxx:Subclass>0600E2304C00F8BD0F001F02250078942F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5605631" lon="-71.3536692"/>
+          <gpxx:rpt lat="42.5603914" lon="-71.3535833">
+            <gpxx:Subclass>0500E2304C00E7270C001F0225008F94BC00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5594044" lon="-71.3539696"/>
+          <gpxx:rpt lat="42.5580740" lon="-71.3540125"/>
+          <gpxx:rpt lat="42.5575161" lon="-71.3539267"/>
+          <gpxx:rpt lat="42.5564503" lon="-71.3535391">
+            <gpxx:Subclass>0500E2304C00E7270C002117000011050000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5564504" lon="-71.3535391">
+      <time>2010-02-25T16:56:45Z</time>
+      <name>1070 Lowell St</name>
+      <cmt>1070 Lowell St</cmt>
+      <desc>1070 Lowell St</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C00E7270C0001800D0016490000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5564503" lon="-71.3535391">
+            <gpxx:Subclass>0500E2304C00E7270C002116000011054900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5560999" lon="-71.3534117"/>
+          <gpxx:rpt lat="42.5548983" lon="-71.3532829">
+            <gpxx:Subclass>0500E2304C00AA8406001F022E005D6E2C01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5555849" lon="-71.3555145"/>
+          <gpxx:rpt lat="42.5555849" lon="-71.3559437"/>
+          <gpxx:rpt lat="42.5554991" lon="-71.3565874"/>
+          <gpxx:rpt lat="42.5550699" lon="-71.3580465"/>
+          <gpxx:rpt lat="42.5547695" lon="-71.3588190"/>
+          <gpxx:rpt lat="42.5541258" lon="-71.3595915"/>
+          <gpxx:rpt lat="42.5531387" lon="-71.3604927">
+            <gpxx:Subclass>0500E2304C008F8406001F022E00176E4701</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5534391" lon="-71.3612223"/>
+          <gpxx:rpt lat="42.5536108" lon="-71.3620377"/>
+          <gpxx:rpt lat="42.5536537" lon="-71.3630247"/>
+          <gpxx:rpt lat="42.5536966" lon="-71.3643980"/>
+          <gpxx:rpt lat="42.5536537" lon="-71.3652134"/>
+          <gpxx:rpt lat="42.5535250" lon="-71.3657713"/>
+          <gpxx:rpt lat="42.5532675" lon="-71.3664579"/>
+          <gpxx:rpt lat="42.5528383" lon="-71.3672733"/>
+          <gpxx:rpt lat="42.5520658" lon="-71.3677025"/>
+          <gpxx:rpt lat="42.5513792" lon="-71.3678312"/>
+          <gpxx:rpt lat="42.5512075" lon="-71.3679600">
+            <gpxx:Subclass>0500E2304C00448506001F002E00B06D7201</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5510788" lon="-71.3680458"/>
+          <gpxx:rpt lat="42.5509501" lon="-71.3683891"/>
+          <gpxx:rpt lat="42.5507784" lon="-71.3691616"/>
+          <gpxx:rpt lat="42.5506496" lon="-71.3695908"/>
+          <gpxx:rpt lat="42.5503922" lon="-71.3699770"/>
+          <gpxx:rpt lat="42.5501347" lon="-71.3701916"/>
+          <gpxx:rpt lat="42.5498343" lon="-71.3703632"/>
+          <gpxx:rpt lat="42.5494909" lon="-71.3704491"/>
+          <gpxx:rpt lat="42.5487185" lon="-71.3703632"/>
+          <gpxx:rpt lat="42.5481606" lon="-71.3704491"/>
+          <gpxx:rpt lat="42.5478172" lon="-71.3706207"/>
+          <gpxx:rpt lat="42.5468302" lon="-71.3713074"/>
+          <gpxx:rpt lat="42.5468302" lon="-71.3713074"/>
+          <gpxx:rpt lat="42.5463581" lon="-71.3717365"/>
+          <gpxx:rpt lat="42.5460577" lon="-71.3720798"/>
+          <gpxx:rpt lat="42.5453281" lon="-71.3737965">
+            <gpxx:Subclass>0500E2304C00448506001F00250099A07A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5450277" lon="-71.3741827"/>
+          <gpxx:rpt lat="42.5441694" lon="-71.3747835"/>
+          <gpxx:rpt lat="42.5429502" lon="-71.3750123">
+            <gpxx:Subclass>0500E2304C004485060021170000BB010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5429503" lon="-71.3750122">
+      <time>2010-02-25T16:56:58Z</time>
+      <name>1130 Curve St</name>
+      <cmt>1130 Curve St</cmt>
+      <desc>1130 Curve St</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C0044850600010002004C1F0000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5429502" lon="-71.3750123">
+            <gpxx:Subclass>0500E2304C004485060021160000BB011F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5427961" lon="-71.3750410"/>
+          <gpxx:rpt lat="42.5422812" lon="-71.3750839">
+            <gpxx:Subclass>0500E2304C00448506001F00250079A09C01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5409508" lon="-71.3755989"/>
+          <gpxx:rpt lat="42.5404787" lon="-71.3758135"/>
+          <gpxx:rpt lat="42.5401354" lon="-71.3760710"/>
+          <gpxx:rpt lat="42.5395775" lon="-71.3767147"/>
+          <gpxx:rpt lat="42.5394058" lon="-71.3768435"/>
+          <gpxx:rpt lat="42.5394058" lon="-71.3768435"/>
+          <gpxx:rpt lat="42.5388908" lon="-71.3768005"/>
+          <gpxx:rpt lat="42.5376463" lon="-71.3768864"/>
+          <gpxx:rpt lat="42.5373459" lon="-71.3770580"/>
+          <gpxx:rpt lat="42.5363588" lon="-71.3778305"/>
+          <gpxx:rpt lat="42.5359297" lon="-71.3780022"/>
+          <gpxx:rpt lat="42.5355005" lon="-71.3781309"/>
+          <gpxx:rpt lat="42.5347710" lon="-71.3781309"/>
+          <gpxx:rpt lat="42.5339985" lon="-71.3778734">
+            <gpxx:Subclass>0300E2304C00068401001F0030001CD95700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5334835" lon="-71.3776588"/>
+          <gpxx:rpt lat="42.5330973" lon="-71.3773584"/>
+          <gpxx:rpt lat="42.5328398" lon="-71.3771439"/>
+          <gpxx:rpt lat="42.5324535" lon="-71.3765430">
+            <gpxx:Subclass>0600E2304C00185102001F02250038A0D000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5321531" lon="-71.3771009"/>
+          <gpxx:rpt lat="42.5315952" lon="-71.3774443"/>
+          <gpxx:rpt lat="42.5317240" lon="-71.3792467"/>
+          <gpxx:rpt lat="42.5316811" lon="-71.3798904"/>
+          <gpxx:rpt lat="42.5315952" lon="-71.3802338"/>
+          <gpxx:rpt lat="42.5313807" lon="-71.3804913"/>
+          <gpxx:rpt lat="42.5306940" lon="-71.3810921"/>
+          <gpxx:rpt lat="42.5305894" lon="-71.3812664">
+            <gpxx:Subclass>0600E2304C00185102002117000092020000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5305895" lon="-71.3812663">
+      <time>2010-02-25T16:57:04Z</time>
+      <name>165 Acton St</name>
+      <cmt>165 Acton St</cmt>
+      <desc>165 Acton St</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600E2304C00185102000180050045220000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5305894" lon="-71.3812664">
+            <gpxx:Subclass>0600E2304C00185102002116000092022200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5305653" lon="-71.3813066"/>
+          <gpxx:rpt lat="42.5305223" lon="-71.3822508">
+            <gpxx:Subclass>0600E2304C00185102001F002500829F6F01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5304794" lon="-71.3829374"/>
+          <gpxx:rpt lat="42.5306511" lon="-71.3848686"/>
+          <gpxx:rpt lat="42.5305653" lon="-71.3854694"/>
+          <gpxx:rpt lat="42.5303936" lon="-71.3858986"/>
+          <gpxx:rpt lat="42.5299215" lon="-71.3867998"/>
+          <gpxx:rpt lat="42.5297928" lon="-71.3869286"/>
+          <gpxx:rpt lat="42.5293207" lon="-71.3872719"/>
+          <gpxx:rpt lat="42.5291491" lon="-71.3874435"/>
+          <gpxx:rpt lat="42.5288916" lon="-71.3880014"/>
+          <gpxx:rpt lat="42.5282907" lon="-71.3887739"/>
+          <gpxx:rpt lat="42.5278187" lon="-71.3900614"/>
+          <gpxx:rpt lat="42.5274754" lon="-71.3908339"/>
+          <gpxx:rpt lat="42.5271749" lon="-71.3911343">
+            <gpxx:Subclass>0500E2304C00AECC13001F182500779E6602</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5267029" lon="-71.3912630"/>
+          <gpxx:rpt lat="42.5252867" lon="-71.3914776"/>
+          <gpxx:rpt lat="42.5247717" lon="-71.3915205"/>
+          <gpxx:rpt lat="42.5244284" lon="-71.3914347"/>
+          <gpxx:rpt lat="42.5239563" lon="-71.3911772"/>
+          <gpxx:rpt lat="42.5235701" lon="-71.3907480"/>
+          <gpxx:rpt lat="42.5232697" lon="-71.3904476"/>
+          <gpxx:rpt lat="42.5221968" lon="-71.3897610"/>
+          <gpxx:rpt lat="42.5220680" lon="-71.3897181"/>
+          <gpxx:rpt lat="42.5218964" lon="-71.3897610"/>
+          <gpxx:rpt lat="42.5217247" lon="-71.3898897"/>
+          <gpxx:rpt lat="42.5215960" lon="-71.3900185"/>
+          <gpxx:rpt lat="42.5214243" lon="-71.3900614"/>
+          <gpxx:rpt lat="42.5210810" lon="-71.3898897"/>
+          <gpxx:rpt lat="42.5198364" lon="-71.3895464"/>
+          <gpxx:rpt lat="42.5196218" lon="-71.3895893"/>
+          <gpxx:rpt lat="42.5192356" lon="-71.3899326"/>
+          <gpxx:rpt lat="42.5189352" lon="-71.3901043"/>
+          <gpxx:rpt lat="42.5179482" lon="-71.3904047"/>
+          <gpxx:rpt lat="42.5176477" lon="-71.3904047"/>
+          <gpxx:rpt lat="42.5161886" lon="-71.3897181"/>
+          <gpxx:rpt lat="42.5146866" lon="-71.3892889"/>
+          <gpxx:rpt lat="42.5146866" lon="-71.3892889">
+            <gpxx:Subclass>0500E2304C00AECC13001F002500CA9EC100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5114679" lon="-71.3872290"/>
+          <gpxx:rpt lat="42.5109384" lon="-71.3869329">
+            <gpxx:Subclass>0500E2304C00AECC1300211700006D010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5109384" lon="-71.3869329">
+      <time>2010-02-25T16:57:14Z</time>
+      <name>988 West St</name>
+      <cmt>988 West St</cmt>
+      <desc>988 West St</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C00AECC130001000200BDC70000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5109384" lon="-71.3869329">
+            <gpxx:Subclass>0500E2304C00AECC1300211600006D01C800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5100088" lon="-71.3864136"/>
+          <gpxx:rpt lat="42.5097513" lon="-71.3861990"/>
+          <gpxx:rpt lat="42.5094938" lon="-71.3859844"/>
+          <gpxx:rpt lat="42.5091934" lon="-71.3855124"/>
+          <gpxx:rpt lat="42.5078201" lon="-71.3831520">
+            <gpxx:Subclass>0500E2304C00AECC13001F0025004A9F5500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5067472" lon="-71.3828945"/>
+          <gpxx:rpt lat="42.5060177" lon="-71.3826799">
+            <gpxx:Subclass>0500E2304C002A940F001F022E00EE6CB701</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5058460" lon="-71.3828087"/>
+          <gpxx:rpt lat="42.5048161" lon="-71.3834095"/>
+          <gpxx:rpt lat="42.5045586" lon="-71.3837528"/>
+          <gpxx:rpt lat="42.5039577" lon="-71.3849545"/>
+          <gpxx:rpt lat="42.5037003" lon="-71.3852978"/>
+          <gpxx:rpt lat="42.5033140" lon="-71.3856840"/>
+          <gpxx:rpt lat="42.5022411" lon="-71.3865423"/>
+          <gpxx:rpt lat="42.5011683" lon="-71.3873577"/>
+          <gpxx:rpt lat="42.4988079" lon="-71.3888597"/>
+          <gpxx:rpt lat="42.4981642" lon="-71.3894176">
+            <gpxx:Subclass>0500E2304C002A940F001F002500BF9E3B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4976492" lon="-71.3898468"/>
+          <gpxx:rpt lat="42.4972630" lon="-71.3903189"/>
+          <gpxx:rpt lat="42.4971775" lon="-71.3904686">
+            <gpxx:Subclass>0500E2304C002A940F002117000068010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.4971775" lon="-71.3904683">
+      <time>2010-02-25T16:57:26Z</time>
+      <name>299 Pope Rd</name>
+      <cmt>299 Pope Rd</cmt>
+      <desc>299 Pope Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C002A940F0001800100EA850000</gpxx:Subclass>
+          <gpxx:rpt lat="42.4971775" lon="-71.3904686">
+            <gpxx:Subclass>0500E2304C002A940F002116000068018600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4970913" lon="-71.3906193"/>
+          <gpxx:rpt lat="42.4965763" lon="-71.3917780"/>
+          <gpxx:rpt lat="42.4954605" lon="-71.3935804">
+            <gpxx:Subclass>0500E2304C002A940F001F002500089EE200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4943876" lon="-71.3957262"/>
+          <gpxx:rpt lat="42.4929285" lon="-71.3992023">
+            <gpxx:Subclass>0500E2304C0037940F001F002E0089815A03</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4927139" lon="-71.3995028"/>
+          <gpxx:rpt lat="42.4917269" lon="-71.4002752"/>
+          <gpxx:rpt lat="42.4892807" lon="-71.4019489"/>
+          <gpxx:rpt lat="42.4881220" lon="-71.4028502"/>
+          <gpxx:rpt lat="42.4873066" lon="-71.4036226"/>
+          <gpxx:rpt lat="42.4868774" lon="-71.4040089"/>
+          <gpxx:rpt lat="42.4864483" lon="-71.4042664"/>
+          <gpxx:rpt lat="42.4861479" lon="-71.4044380"/>
+          <gpxx:rpt lat="42.4856758" lon="-71.4045238"/>
+          <gpxx:rpt lat="42.4855042" lon="-71.4045668"/>
+          <gpxx:rpt lat="42.4849033" lon="-71.4048243"/>
+          <gpxx:rpt lat="42.4844313" lon="-71.4050817"/>
+          <gpxx:rpt lat="42.4801826" lon="-71.4080858"/>
+          <gpxx:rpt lat="42.4793673" lon="-71.4087296"/>
+          <gpxx:rpt lat="42.4793673" lon="-71.4087296"/>
+          <gpxx:rpt lat="42.4778223" lon="-71.4100599"/>
+          <gpxx:rpt lat="42.4767065" lon="-71.4110041">
+            <gpxx:Subclass>0300E2304C0071A401001F022E00B7805700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4774361" lon="-71.4124203"/>
+          <gpxx:rpt lat="42.4778226" lon="-71.4130277">
+            <gpxx:Subclass>0300E2304C0071A401002117000055010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.4778226" lon="-71.4130278">
+      <time>2010-02-25T16:58:26Z</time>
+      <name>S/F - Bagels Plus</name>
+      <cmt>98 Great Rd</cmt>
+      <desc>98 Great Rd</desc>
+      <sym>Bike Trail</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+  <rte>
+    <name>Bagel 32</name>
+    <extensions>
+      <gpxx:RouteExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="42.4778226" lon="-71.4130278">
+      <time>2010-02-25T16:58:26Z</time>
+      <name>S/F - Bagels Plus</name>
+      <cmt>98 Great Rd</cmt>
+      <desc>98 Great Rd</desc>
+      <sym>Bike Trail</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+          <gpxx:rpt lat="42.4778226" lon="-71.4130277">
+            <gpxx:Subclass>0300E2304C0071A401002116000055010F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4780369" lon="-71.4133644">
+            <gpxx:Subclass>0500E2304C00B0FD05001F062E0069805303</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4779081" lon="-71.4136648"/>
+          <gpxx:rpt lat="42.4779940" lon="-71.4153814"/>
+          <gpxx:rpt lat="42.4780798" lon="-71.4167547"/>
+          <gpxx:rpt lat="42.4784660" lon="-71.4217758"/>
+          <gpxx:rpt lat="42.4786377" lon="-71.4232349"/>
+          <gpxx:rpt lat="42.4788523" lon="-71.4259386"/>
+          <gpxx:rpt lat="42.4790239" lon="-71.4263248"/>
+          <gpxx:rpt lat="42.4793243" lon="-71.4266682"/>
+          <gpxx:rpt lat="42.4793243" lon="-71.4266682"/>
+          <gpxx:rpt lat="42.4800539" lon="-71.4272261"/>
+          <gpxx:rpt lat="42.4810410" lon="-71.4279127"/>
+          <gpxx:rpt lat="42.4815130" lon="-71.4282990"/>
+          <gpxx:rpt lat="42.4821568" lon="-71.4290285"/>
+          <gpxx:rpt lat="42.4821568" lon="-71.4290285"/>
+          <gpxx:rpt lat="42.4837017" lon="-71.4309168"/>
+          <gpxx:rpt lat="42.4847746" lon="-71.4325905"/>
+          <gpxx:rpt lat="42.4850750" lon="-71.4330196"/>
+          <gpxx:rpt lat="42.4852037" lon="-71.4334059"/>
+          <gpxx:rpt lat="42.4852467" lon="-71.4340496">
+            <gpxx:Subclass>0500E2304C000CD80D001F022E00987E1801</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4866199" lon="-71.4364100"/>
+          <gpxx:rpt lat="42.4866199" lon="-71.4364100"/>
+          <gpxx:rpt lat="42.4872208" lon="-71.4373541"/>
+          <gpxx:rpt lat="42.4886370" lon="-71.4397144"/>
+          <gpxx:rpt lat="42.4886370" lon="-71.4397144"/>
+          <gpxx:rpt lat="42.4890232" lon="-71.4404869">
+            <gpxx:Subclass>0500E2304C000CD80D001F00250028C65400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4897099" lon="-71.4419889"/>
+          <gpxx:rpt lat="42.4900146" lon="-71.4425113">
+            <gpxx:Subclass>0500E2304C000CD80D00211700006E010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.4900146" lon="-71.4425115">
+      <time>2010-02-25T15:43:11Z</time>
+      <name>69 Newtown Rd</name>
+      <cmt>69 Newtown Rd</cmt>
+      <desc>69 Newtown Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C000CD80D00018004009F530000</gpxx:Subclass>
+          <gpxx:rpt lat="42.4900146" lon="-71.4425113">
+            <gpxx:Subclass>0500E2304C000CD80D00211600006E011600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4903107" lon="-71.4430189">
+            <gpxx:Subclass>0500E2304C000CD80D001F0025007EC5BC02</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4908686" lon="-71.4437914"/>
+          <gpxx:rpt lat="42.4908686" lon="-71.4437914"/>
+          <gpxx:rpt lat="42.4931002" lon="-71.4470100"/>
+          <gpxx:rpt lat="42.4937439" lon="-71.4480829"/>
+          <gpxx:rpt lat="42.4943447" lon="-71.4491129"/>
+          <gpxx:rpt lat="42.4952459" lon="-71.4509583"/>
+          <gpxx:rpt lat="42.4952459" lon="-71.4509583"/>
+          <gpxx:rpt lat="42.4957609" lon="-71.4520311"/>
+          <gpxx:rpt lat="42.4965334" lon="-71.4530182"/>
+          <gpxx:rpt lat="42.4974775" lon="-71.4539623"/>
+          <gpxx:rpt lat="42.4987221" lon="-71.4554644"/>
+          <gpxx:rpt lat="42.5004387" lon="-71.4573956"/>
+          <gpxx:rpt lat="42.5006962" lon="-71.4576530">
+            <gpxx:Subclass>0600E2304C00A04408001F022500BFF4F200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5022411" lon="-71.4569664"/>
+          <gpxx:rpt lat="42.5035286" lon="-71.4562368"/>
+          <gpxx:rpt lat="42.5046015" lon="-71.4558077"/>
+          <gpxx:rpt lat="42.5049448" lon="-71.4555073"/>
+          <gpxx:rpt lat="42.5054355" lon="-71.4549301">
+            <gpxx:Subclass>0600E2304C00A044080021170000F2000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5054356" lon="-71.4549299">
+      <time>2010-02-25T15:43:19Z</time>
+      <name>88 Fort Pond Rd</name>
+      <cmt>88 Fort Pond Rd</cmt>
+      <desc>88 Fort Pond Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600E2304C00A0440800010000003BF20000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5054355" lon="-71.4549301">
+            <gpxx:Subclass>0600E2304C00A044080021160000F2001C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5056744" lon="-71.4546490"/>
+          <gpxx:rpt lat="42.5059319" lon="-71.4544773">
+            <gpxx:Subclass>0600E2304C00A04408001F002500FDF4C300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5061464" lon="-71.4540482"/>
+          <gpxx:rpt lat="42.5071764" lon="-71.4523745"/>
+          <gpxx:rpt lat="42.5087643" lon="-71.4503145">
+            <gpxx:Subclass>0600E2304C0060A10D001F06250094F53703</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5090647" lon="-71.4504433"/>
+          <gpxx:rpt lat="42.5094938" lon="-71.4504862"/>
+          <gpxx:rpt lat="42.5105238" lon="-71.4502287"/>
+          <gpxx:rpt lat="42.5116396" lon="-71.4505291"/>
+          <gpxx:rpt lat="42.5132275" lon="-71.4504862"/>
+          <gpxx:rpt lat="42.5133562" lon="-71.4505720"/>
+          <gpxx:rpt lat="42.5135708" lon="-71.4508724"/>
+          <gpxx:rpt lat="42.5139570" lon="-71.4518166"/>
+          <gpxx:rpt lat="42.5143003" lon="-71.4528894"/>
+          <gpxx:rpt lat="42.5145149" lon="-71.4534903"/>
+          <gpxx:rpt lat="42.5147295" lon="-71.4537907"/>
+          <gpxx:rpt lat="42.5150299" lon="-71.4540482"/>
+          <gpxx:rpt lat="42.5158453" lon="-71.4547348"/>
+          <gpxx:rpt lat="42.5161886" lon="-71.4549065"/>
+          <gpxx:rpt lat="42.5170469" lon="-71.4551640"/>
+          <gpxx:rpt lat="42.5178623" lon="-71.4552927"/>
+          <gpxx:rpt lat="42.5181627" lon="-71.4554214"/>
+          <gpxx:rpt lat="42.5200510" lon="-71.4569664"/>
+          <gpxx:rpt lat="42.5200510" lon="-71.4569664"/>
+          <gpxx:rpt lat="42.5223684" lon="-71.4585972"/>
+          <gpxx:rpt lat="42.5234413" lon="-71.4599705"/>
+          <gpxx:rpt lat="42.5236988" lon="-71.4601851">
+            <gpxx:Subclass>0500E2304C00EBD70D001F02250020F4FC00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5236988" lon="-71.4601851"/>
+          <gpxx:rpt lat="42.5239992" lon="-71.4597988"/>
+          <gpxx:rpt lat="42.5244284" lon="-71.4594126"/>
+          <gpxx:rpt lat="42.5249863" lon="-71.4591551"/>
+          <gpxx:rpt lat="42.5258017" lon="-71.4589834"/>
+          <gpxx:rpt lat="42.5263596" lon="-71.4589405"/>
+          <gpxx:rpt lat="42.5269175" lon="-71.4589834"/>
+          <gpxx:rpt lat="42.5279474" lon="-71.4594555"/>
+          <gpxx:rpt lat="42.5281620" lon="-71.4595413"/>
+          <gpxx:rpt lat="42.5288057" lon="-71.4596701">
+            <gpxx:Subclass>0500E2304C00EC3711001F022E002A8DC400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5288486" lon="-71.4594126"/>
+          <gpxx:rpt lat="42.5288916" lon="-71.4590693"/>
+          <gpxx:rpt lat="42.5290203" lon="-71.4587688"/>
+          <gpxx:rpt lat="42.5297499" lon="-71.4576530"/>
+          <gpxx:rpt lat="42.5308657" lon="-71.4561939"/>
+          <gpxx:rpt lat="42.5315523" lon="-71.4554214">
+            <gpxx:Subclass>0500E2304C00EC3711001F002500EBF44B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5325823" lon="-71.4546490"/>
+          <gpxx:rpt lat="42.5329249" lon="-71.4543064">
+            <gpxx:Subclass>0500E2304C00EC3711002117000011010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5329250" lon="-71.4543063">
+      <time>2010-02-25T15:43:31Z</time>
+      <name>27 Shaker Ln</name>
+      <cmt>27 Shaker Ln</cmt>
+      <desc>27 Shaker Ln</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C00EC37110001000300AF4A0000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5329249" lon="-71.4543064">
+            <gpxx:Subclass>0500E2304C00EC371100211600001101BF00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5330544" lon="-71.4541769"/>
+          <gpxx:rpt lat="42.5333977" lon="-71.4537048"/>
+          <gpxx:rpt lat="42.5338697" lon="-71.4522028"/>
+          <gpxx:rpt lat="42.5339556" lon="-71.4518166"/>
+          <gpxx:rpt lat="42.5339985" lon="-71.4496279"/>
+          <gpxx:rpt lat="42.5340843" lon="-71.4494133"/>
+          <gpxx:rpt lat="42.5342131" lon="-71.4492846">
+            <gpxx:Subclass>0300E2304C0030A501001F022E00C28D2B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5338268" lon="-71.4481258">
+            <gpxx:Subclass>0500E2304C007BA70F001F063000AED7E500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5380325" lon="-71.4447355">
+            <gpxx:Subclass>0500E2304C0082A60F001F002E001A8E0103</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5415516" lon="-71.4418173"/>
+          <gpxx:rpt lat="42.5420666" lon="-71.4413452"/>
+          <gpxx:rpt lat="42.5425816" lon="-71.4406586"/>
+          <gpxx:rpt lat="42.5439978" lon="-71.4388132"/>
+          <gpxx:rpt lat="42.5443411" lon="-71.4385128"/>
+          <gpxx:rpt lat="42.5453281" lon="-71.4378691"/>
+          <gpxx:rpt lat="42.5456285" lon="-71.4373970"/>
+          <gpxx:rpt lat="42.5462294" lon="-71.4368391"/>
+          <gpxx:rpt lat="42.5465298" lon="-71.4367104"/>
+          <gpxx:rpt lat="42.5468302" lon="-71.4366674"/>
+          <gpxx:rpt lat="42.5488043" lon="-71.4372683"/>
+          <gpxx:rpt lat="42.5505638" lon="-71.4372683"/>
+          <gpxx:rpt lat="42.5509071" lon="-71.4373112"/>
+          <gpxx:rpt lat="42.5513363" lon="-71.4375257"/>
+          <gpxx:rpt lat="42.5524521" lon="-71.4382553">
+            <gpxx:Subclass>0500E2304C00EE8401001F032E00838E1301</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5522804" lon="-71.4379120"/>
+          <gpxx:rpt lat="42.5518084" lon="-71.4364100"/>
+          <gpxx:rpt lat="42.5517654" lon="-71.4360237"/>
+          <gpxx:rpt lat="42.5518513" lon="-71.4352083"/>
+          <gpxx:rpt lat="42.5518513" lon="-71.4343500"/>
+          <gpxx:rpt lat="42.5516796" lon="-71.4329338"/>
+          <gpxx:rpt lat="42.5516796" lon="-71.4320755"/>
+          <gpxx:rpt lat="42.5518513" lon="-71.4311743"/>
+          <gpxx:rpt lat="42.5519371" lon="-71.4304876">
+            <gpxx:Subclass>0500E2304C00EE8401001F002500EAFD4F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5519800" lon="-71.4293289"/>
+          <gpxx:rpt lat="42.5517908" lon="-71.4282212">
+            <gpxx:Subclass>0500E2304C00EE84010021170000A9010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5517908" lon="-71.4282213">
+      <time>2010-02-25T15:43:58Z</time>
+      <name>213 Concord Rd</name>
+      <cmt>213 Concord Rd</cmt>
+      <desc>213 Concord Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C00EE8401000101040044680000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5517908" lon="-71.4282212">
+            <gpxx:Subclass>0500E2304C00EE84010021160000A9016800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5516796" lon="-71.4275694"/>
+          <gpxx:rpt lat="42.5515938" lon="-71.4271832"/>
+          <gpxx:rpt lat="42.5509501" lon="-71.4254236">
+            <gpxx:Subclass>0500E2304C00EE8401001F002500AFFED900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5505209" lon="-71.4235353"/>
+          <gpxx:rpt lat="42.5503492" lon="-71.4226770"/>
+          <gpxx:rpt lat="42.5503063" lon="-71.4216471"/>
+          <gpxx:rpt lat="42.5503063" lon="-71.4203596"/>
+          <gpxx:rpt lat="42.5504351" lon="-71.4192009">
+            <gpxx:Subclass>0500E2304C00BB550E001F002E000C905500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5508642" lon="-71.4167976">
+            <gpxx:Subclass>0600E2304C00C3550E001F002E0024905603</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5509930" lon="-71.4164114"/>
+          <gpxx:rpt lat="42.5521517" lon="-71.4147806"/>
+          <gpxx:rpt lat="42.5524521" lon="-71.4143085"/>
+          <gpxx:rpt lat="42.5527096" lon="-71.4137506"/>
+          <gpxx:rpt lat="42.5528383" lon="-71.4131927"/>
+          <gpxx:rpt lat="42.5529671" lon="-71.4125061"/>
+          <gpxx:rpt lat="42.5530958" lon="-71.4121199"/>
+          <gpxx:rpt lat="42.5531387" lon="-71.4117765"/>
+          <gpxx:rpt lat="42.5530529" lon="-71.4110899"/>
+          <gpxx:rpt lat="42.5530958" lon="-71.4108753"/>
+          <gpxx:rpt lat="42.5540400" lon="-71.4095449"/>
+          <gpxx:rpt lat="42.5553703" lon="-71.4079571"/>
+          <gpxx:rpt lat="42.5556707" lon="-71.4075279"/>
+          <gpxx:rpt lat="42.5559711" lon="-71.4067984"/>
+          <gpxx:rpt lat="42.5561428" lon="-71.4064980"/>
+          <gpxx:rpt lat="42.5565290" lon="-71.4062405"/>
+          <gpxx:rpt lat="42.5567007" lon="-71.4061546"/>
+          <gpxx:rpt lat="42.5571299" lon="-71.4062405"/>
+          <gpxx:rpt lat="42.5574732" lon="-71.4061975"/>
+          <gpxx:rpt lat="42.5579453" lon="-71.4058113"/>
+          <gpxx:rpt lat="42.5582457" lon="-71.4048672"/>
+          <gpxx:rpt lat="42.5587177" lon="-71.4033222"/>
+          <gpxx:rpt lat="42.5587177" lon="-71.4033222"/>
+          <gpxx:rpt lat="42.5591898" lon="-71.4020348"/>
+          <gpxx:rpt lat="42.5594902" lon="-71.4014339"/>
+          <gpxx:rpt lat="42.5597906" lon="-71.4010906"/>
+          <gpxx:rpt lat="42.5603056" lon="-71.4005327"/>
+          <gpxx:rpt lat="42.5609064" lon="-71.4003181"/>
+          <gpxx:rpt lat="42.5617218" lon="-71.4003181"/>
+          <gpxx:rpt lat="42.5625372" lon="-71.4004040">
+            <gpxx:Subclass>0600E2304C00C3550E001F002500608FBD00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5640392" lon="-71.4005327"/>
+          <gpxx:rpt lat="42.5656271" lon="-71.3995886"/>
+          <gpxx:rpt lat="42.5664412" lon="-71.3994910">
+            <gpxx:Subclass>0600E2304C00C3550E002117000017040000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5664413" lon="-71.3994910">
+      <time>2010-02-25T15:44:24Z</time>
+      <name>172 Old Lowell Rd</name>
+      <cmt>172 Old Lowell Rd</cmt>
+      <desc>172 Old Lowell Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600E2304C00C3550E0001000A0005BD0000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5664412" lon="-71.3994910">
+            <gpxx:Subclass>0600E2304C00C3550E002116000017043F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5667000" lon="-71.3994598"/>
+          <gpxx:rpt lat="42.5677729" lon="-71.3991594">
+            <gpxx:Subclass>0600E2304C00B5550E001F062500818F0F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5680304" lon="-71.3994598"/>
+          <gpxx:rpt lat="42.5680304" lon="-71.3994598">
+            <gpxx:Subclass>0600E2304C000B5A05001F062500768FB700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5678587" lon="-71.4029789"/>
+          <gpxx:rpt lat="42.5678587" lon="-71.4029789"/>
+          <gpxx:rpt lat="42.5676012" lon="-71.4047813">
+            <gpxx:Subclass>0600E2304C00AD6412001F0226001104D703</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5686741" lon="-71.4047813"/>
+          <gpxx:rpt lat="42.5705194" lon="-71.4044809"/>
+          <gpxx:rpt lat="42.5708199" lon="-71.4046097"/>
+          <gpxx:rpt lat="42.5711203" lon="-71.4050817"/>
+          <gpxx:rpt lat="42.5713778" lon="-71.4053392"/>
+          <gpxx:rpt lat="42.5716352" lon="-71.4055109"/>
+          <gpxx:rpt lat="42.5723219" lon="-71.4057684"/>
+          <gpxx:rpt lat="42.5736952" lon="-71.4063263"/>
+          <gpxx:rpt lat="42.5745535" lon="-71.4065409"/>
+          <gpxx:rpt lat="42.5752401" lon="-71.4068842"/>
+          <gpxx:rpt lat="42.5757122" lon="-71.4073563"/>
+          <gpxx:rpt lat="42.5761414" lon="-71.4079142"/>
+          <gpxx:rpt lat="42.5763988" lon="-71.4085579"/>
+          <gpxx:rpt lat="42.5766134" lon="-71.4096737"/>
+          <gpxx:rpt lat="42.5767851" lon="-71.4101887"/>
+          <gpxx:rpt lat="42.5783300" lon="-71.4133644"/>
+          <gpxx:rpt lat="42.5787163" lon="-71.4140940"/>
+          <gpxx:rpt lat="42.5793600" lon="-71.4150810"/>
+          <gpxx:rpt lat="42.5807333" lon="-71.4168406"/>
+          <gpxx:rpt lat="42.5810766" lon="-71.4170980"/>
+          <gpxx:rpt lat="42.5820637" lon="-71.4176130"/>
+          <gpxx:rpt lat="42.5822353" lon="-71.4177847"/>
+          <gpxx:rpt lat="42.5830507" lon="-71.4190292"/>
+          <gpxx:rpt lat="42.5833082" lon="-71.4196301"/>
+          <gpxx:rpt lat="42.5836086" lon="-71.4199734">
+            <gpxx:Subclass>0600E2304C001EAD0E001F062600BB272300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5835657" lon="-71.4210033"/>
+          <gpxx:rpt lat="42.5835657" lon="-71.4210033">
+            <gpxx:Subclass>0600E2304C001EAD0E001F00260083271700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5833300" lon="-71.4215927">
+            <gpxx:Subclass>0600E2304C001EAD0E002117000024000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5833300" lon="-71.4215925">
+      <time>2010-02-25T15:44:44Z</time>
+      <name>3 Palace Rd</name>
+      <cmt>3 Palace Rd</cmt>
+      <desc>3 Palace Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600E2304C001EAD0E0001800000A5230000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5833300" lon="-71.4215927">
+            <gpxx:Subclass>0600E2304C001EAD0E002116000024002400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5829649" lon="-71.4225054">
+            <gpxx:Subclass>0600E2304C0042CD0F001F02260042274802</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5829649" lon="-71.4225054"/>
+          <gpxx:rpt lat="42.5840378" lon="-71.4232779"/>
+          <gpxx:rpt lat="42.5856256" lon="-71.4244366"/>
+          <gpxx:rpt lat="42.5862694" lon="-71.4249086"/>
+          <gpxx:rpt lat="42.5866127" lon="-71.4252090"/>
+          <gpxx:rpt lat="42.5873423" lon="-71.4261103"/>
+          <gpxx:rpt lat="42.5883722" lon="-71.4271402"/>
+          <gpxx:rpt lat="42.5914192" lon="-71.4296722"/>
+          <gpxx:rpt lat="42.5921917" lon="-71.4302731"/>
+          <gpxx:rpt lat="42.5932646" lon="-71.4309597"/>
+          <gpxx:rpt lat="42.5936937" lon="-71.4313459">
+            <gpxx:Subclass>0600E2304C0042CD0F001F0026002C252600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5936937" lon="-71.4313459"/>
+          <gpxx:rpt lat="42.5944967" lon="-71.4314032">
+            <gpxx:Subclass>0600E2304C0042CD0F002117000009040000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5944968" lon="-71.4314032">
+      <time>2010-02-25T15:45:05Z</time>
+      <name>4 Providence Rd</name>
+      <cmt>4 Providence Rd</cmt>
+      <desc>4 Providence Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600E2304C0042CD0F00018007007A250000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5944967" lon="-71.4314032">
+            <gpxx:Subclass>0600E2304C0042CD0F002116000009042100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5948954" lon="-71.4314318"/>
+          <gpxx:rpt lat="42.5951958" lon="-71.4313889">
+            <gpxx:Subclass>0600E2304C00B5250C001F0226002125D604</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5947237" lon="-71.4294577"/>
+          <gpxx:rpt lat="42.5946379" lon="-71.4288998"/>
+          <gpxx:rpt lat="42.5947237" lon="-71.4285564"/>
+          <gpxx:rpt lat="42.5948095" lon="-71.4283419"/>
+          <gpxx:rpt lat="42.5953245" lon="-71.4273548"/>
+          <gpxx:rpt lat="42.5953245" lon="-71.4273548"/>
+          <gpxx:rpt lat="42.5963545" lon="-71.4255095"/>
+          <gpxx:rpt lat="42.5967407" lon="-71.4245653"/>
+          <gpxx:rpt lat="42.5969553" lon="-71.4237070"/>
+          <gpxx:rpt lat="42.5970411" lon="-71.4229345"/>
+          <gpxx:rpt lat="42.5969553" lon="-71.4212608"/>
+          <gpxx:rpt lat="42.5969553" lon="-71.4204884"/>
+          <gpxx:rpt lat="42.5971270" lon="-71.4199734"/>
+          <gpxx:rpt lat="42.5981998" lon="-71.4181280"/>
+          <gpxx:rpt lat="42.5989723" lon="-71.4170980"/>
+          <gpxx:rpt lat="42.5989723" lon="-71.4170980"/>
+          <gpxx:rpt lat="42.5995731" lon="-71.4164543"/>
+          <gpxx:rpt lat="42.6006460" lon="-71.4156389"/>
+          <gpxx:rpt lat="42.6012897" lon="-71.4152098"/>
+          <gpxx:rpt lat="42.6044655" lon="-71.4137506"/>
+          <gpxx:rpt lat="42.6050663" lon="-71.4134073"/>
+          <gpxx:rpt lat="42.6055813" lon="-71.4129782"/>
+          <gpxx:rpt lat="42.6065683" lon="-71.4116907"/>
+          <gpxx:rpt lat="42.6076412" lon="-71.4102316"/>
+          <gpxx:rpt lat="42.6087141" lon="-71.4078712"/>
+          <gpxx:rpt lat="42.6091003" lon="-71.4071846"/>
+          <gpxx:rpt lat="42.6102591" lon="-71.4054251">
+            <gpxx:Subclass>0600E2304C0052F808001F002600241E2401</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.6108170" lon="-71.4047384"/>
+          <gpxx:rpt lat="42.6108170" lon="-71.4047384"/>
+          <gpxx:rpt lat="42.6112032" lon="-71.4040518"/>
+          <gpxx:rpt lat="42.6118040" lon="-71.4010048"/>
+          <gpxx:rpt lat="42.6120186" lon="-71.4001894"/>
+          <gpxx:rpt lat="42.6127911" lon="-71.3977432">
+            <gpxx:Subclass>0500E2304C00540211001F022600C12F1700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.6123647" lon="-71.3974172">
+            <gpxx:Subclass>0500E2304C00540211002117000099010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.6123648" lon="-71.3974172">
+      <time>2010-02-25T15:45:30Z</time>
+      <name>75 School St</name>
+      <cmt>75 School St</cmt>
+      <desc>75 School St</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C00540211000100040082220000</gpxx:Subclass>
+          <gpxx:rpt lat="42.6123647" lon="-71.3974172">
+            <gpxx:Subclass>0500E2304C00540211002116000099012300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.6120615" lon="-71.3971853"/>
+          <gpxx:rpt lat="42.6117611" lon="-71.3968420">
+            <gpxx:Subclass>0500E2304C00540211001F00260013307501</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.6112890" lon="-71.3964558"/>
+          <gpxx:rpt lat="42.6104736" lon="-71.3962412"/>
+          <gpxx:rpt lat="42.6102161" lon="-71.3961124"/>
+          <gpxx:rpt lat="42.6092291" lon="-71.3952112"/>
+          <gpxx:rpt lat="42.6089287" lon="-71.3951254"/>
+          <gpxx:rpt lat="42.6084137" lon="-71.3951683"/>
+          <gpxx:rpt lat="42.6079416" lon="-71.3949108"/>
+          <gpxx:rpt lat="42.6070833" lon="-71.3944387"/>
+          <gpxx:rpt lat="42.6066113" lon="-71.3938379"/>
+          <gpxx:rpt lat="42.6060963" lon="-71.3926363"/>
+          <gpxx:rpt lat="42.6060104" lon="-71.3915205"/>
+          <gpxx:rpt lat="42.6059675" lon="-71.3909197">
+            <gpxx:Subclass>0500E2304C00CA6E0E001F002E0043915100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.6059675" lon="-71.3909197"/>
+          <gpxx:rpt lat="42.6062679" lon="-71.3898039"/>
+          <gpxx:rpt lat="42.6065683" lon="-71.3892031"/>
+          <gpxx:rpt lat="42.6067829" lon="-71.3888168">
+            <gpxx:Subclass>0500E2304C00D7D813001F022E0055919C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.6066542" lon="-71.3883018"/>
+          <gpxx:rpt lat="42.6065254" lon="-71.3879585"/>
+          <gpxx:rpt lat="42.6063538" lon="-71.3877869"/>
+          <gpxx:rpt lat="42.6057100" lon="-71.3872719"/>
+          <gpxx:rpt lat="42.6055813" lon="-71.3871002"/>
+          <gpxx:rpt lat="42.6054955" lon="-71.3867569"/>
+          <gpxx:rpt lat="42.6057360" lon="-71.3850951">
+            <gpxx:Subclass>0500E2304C00D7D8130021170000E9040000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.6057360" lon="-71.3850951">
+      <time>2010-02-25T15:45:50Z</time>
+      <name>241 Westford St</name>
+      <cmt>241 Westford St</cmt>
+      <desc>241 Westford St</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C00D7D8130001801600EC370000</gpxx:Subclass>
+          <gpxx:rpt lat="42.6057360" lon="-71.3850951">
+            <gpxx:Subclass>0500E2304C00D7D8130021160000E9043800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.6059675" lon="-71.3834953">
+            <gpxx:Subclass>0500E2304C00D7D813001F00260060325102</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.6061392" lon="-71.3820362"/>
+          <gpxx:rpt lat="42.6061392" lon="-71.3810921"/>
+          <gpxx:rpt lat="42.6060534" lon="-71.3807058"/>
+          <gpxx:rpt lat="42.6060104" lon="-71.3801908"/>
+          <gpxx:rpt lat="42.6056671" lon="-71.3786030"/>
+          <gpxx:rpt lat="42.6054525" lon="-71.3779593"/>
+          <gpxx:rpt lat="42.6045942" lon="-71.3765860"/>
+          <gpxx:rpt lat="42.6045942" lon="-71.3765860"/>
+          <gpxx:rpt lat="42.6042509" lon="-71.3760710"/>
+          <gpxx:rpt lat="42.6040363" lon="-71.3754702"/>
+          <gpxx:rpt lat="42.6036930" lon="-71.3740110"/>
+          <gpxx:rpt lat="42.6034355" lon="-71.3731527"/>
+          <gpxx:rpt lat="42.6032209" lon="-71.3728094"/>
+          <gpxx:rpt lat="42.6028776" lon="-71.3724661"/>
+          <gpxx:rpt lat="42.6028776" lon="-71.3724661"/>
+          <gpxx:rpt lat="42.6025343" lon="-71.3720798"/>
+          <gpxx:rpt lat="42.6023626" lon="-71.3717794"/>
+          <gpxx:rpt lat="42.6018906" lon="-71.3707495"/>
+          <gpxx:rpt lat="42.6012897" lon="-71.3696766"/>
+          <gpxx:rpt lat="42.6009893" lon="-71.3689470"/>
+          <gpxx:rpt lat="42.6007748" lon="-71.3683462">
+            <gpxx:Subclass>0600E2304C00EC5B00001F22260036360A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.6007748" lon="-71.3683462"/>
+          <gpxx:rpt lat="42.6005602" lon="-71.3684750">
+            <gpxx:Subclass>0600E2304C0038460F001F00260021363502</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.6001740" lon="-71.3696766"/>
+          <gpxx:rpt lat="42.5996590" lon="-71.3708353"/>
+          <gpxx:rpt lat="42.5985003" lon="-71.3726807"/>
+          <gpxx:rpt lat="42.5981140" lon="-71.3729811"/>
+          <gpxx:rpt lat="42.5975561" lon="-71.3731098"/>
+          <gpxx:rpt lat="42.5972986" lon="-71.3732815"/>
+          <gpxx:rpt lat="42.5963545" lon="-71.3744831"/>
+          <gpxx:rpt lat="42.5954103" lon="-71.3757706"/>
+          <gpxx:rpt lat="42.5945950" lon="-71.3771439"/>
+          <gpxx:rpt lat="42.5935650" lon="-71.3783026"/>
+          <gpxx:rpt lat="42.5935650" lon="-71.3783026"/>
+          <gpxx:rpt lat="42.5929642" lon="-71.3788605"/>
+          <gpxx:rpt lat="42.5923634" lon="-71.3791180"/>
+          <gpxx:rpt lat="42.5918913" lon="-71.3790751">
+            <gpxx:Subclass>0600E2304C00495F0A001F00260057336500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5897858" lon="-71.3783731">
+            <gpxx:Subclass>0600E2304C00495F0A002117000063030000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5897859" lon="-71.3783731">
+      <time>2010-02-25T16:54:17Z</time>
+      <name>24 Hunt Rd</name>
+      <cmt>24 Hunt Rd</cmt>
+      <desc>24 Hunt Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600E2304C00495F0A0001800A0056690000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5897858" lon="-71.3783731">
+            <gpxx:Subclass>0600E2304C00495F0A002116000063036900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5890589" lon="-71.3781309"/>
+          <gpxx:rpt lat="42.5876856" lon="-71.3772726">
+            <gpxx:Subclass>0600E2304C00495F0A001F002600CF33E702</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5871277" lon="-71.3770151"/>
+          <gpxx:rpt lat="42.5865698" lon="-71.3770151"/>
+          <gpxx:rpt lat="42.5864410" lon="-71.3770580"/>
+          <gpxx:rpt lat="42.5858402" lon="-71.3776159"/>
+          <gpxx:rpt lat="42.5844669" lon="-71.3795471"/>
+          <gpxx:rpt lat="42.5842094" lon="-71.3796329"/>
+          <gpxx:rpt lat="42.5833082" lon="-71.3795900"/>
+          <gpxx:rpt lat="42.5827503" lon="-71.3798046"/>
+          <gpxx:rpt lat="42.5822783" lon="-71.3798046"/>
+          <gpxx:rpt lat="42.5822783" lon="-71.3798046"/>
+          <gpxx:rpt lat="42.5812054" lon="-71.3797188"/>
+          <gpxx:rpt lat="42.5810337" lon="-71.3797188"/>
+          <gpxx:rpt lat="42.5805187" lon="-71.3803625"/>
+          <gpxx:rpt lat="42.5803041" lon="-71.3807917"/>
+          <gpxx:rpt lat="42.5800896" lon="-71.3819504"/>
+          <gpxx:rpt lat="42.5798321" lon="-71.3827229"/>
+          <gpxx:rpt lat="42.5798321" lon="-71.3827229"/>
+          <gpxx:rpt lat="42.5796604" lon="-71.3831520"/>
+          <gpxx:rpt lat="42.5795317" lon="-71.3833666"/>
+          <gpxx:rpt lat="42.5792742" lon="-71.3835812"/>
+          <gpxx:rpt lat="42.5788021" lon="-71.3838387"/>
+          <gpxx:rpt lat="42.5782442" lon="-71.3840961"/>
+          <gpxx:rpt lat="42.5771713" lon="-71.3843536"/>
+          <gpxx:rpt lat="42.5757980" lon="-71.3848257"/>
+          <gpxx:rpt lat="42.5751543" lon="-71.3852549"/>
+          <gpxx:rpt lat="42.5744247" lon="-71.3856411">
+            <gpxx:Subclass>0600E2304C00988B00001F382500FF901300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5744247" lon="-71.3856411"/>
+          <gpxx:rpt lat="42.5739956" lon="-71.3856411">
+            <gpxx:Subclass>0600E2304C00CA9908001F002500F4904A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5736094" lon="-71.3853836"/>
+          <gpxx:rpt lat="42.5727081" lon="-71.3849974"/>
+          <gpxx:rpt lat="42.5725365" lon="-71.3848686">
+            <gpxx:Subclass>0600E2304C005D7D0C001F0025002D912F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5719786" lon="-71.3836670">
+            <gpxx:Subclass>0600E2304C005D7D0C001F00250061912500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5719786" lon="-71.3836670"/>
+          <gpxx:rpt lat="42.5716451" lon="-71.3826970">
+            <gpxx:Subclass>0600E2304C005D7D0C002117000055000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5716451" lon="-71.3826969">
+      <time>2010-02-25T16:54:54Z</time>
+      <name>34 Maple Rd</name>
+      <cmt>34 Maple Rd</cmt>
+      <desc>34 Maple Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600E2304C005D7D0C0001800100BE240000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5716451" lon="-71.3826970">
+            <gpxx:Subclass>0600E2304C005D7D0C002116000055004000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5715065" lon="-71.3822937"/>
+          <gpxx:rpt lat="42.5713348" lon="-71.3813925"/>
+          <gpxx:rpt lat="42.5712919" lon="-71.3809204">
+            <gpxx:Subclass>0600E2304C005D7D0C001F00250082918700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5714636" lon="-71.3803625"/>
+          <gpxx:rpt lat="42.5715494" lon="-71.3797617"/>
+          <gpxx:rpt lat="42.5715494" lon="-71.3792896"/>
+          <gpxx:rpt lat="42.5712919" lon="-71.3775301"/>
+          <gpxx:rpt lat="42.5713778" lon="-71.3771009">
+            <gpxx:Subclass>0500E2304C00B3F105001F002E00176D1900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5714636" lon="-71.3767147"/>
+          <gpxx:rpt lat="42.5715065" lon="-71.3763714">
+            <gpxx:Subclass>0500E2304C0047BE0F001F022E00366D1001</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5712490" lon="-71.3761997"/>
+          <gpxx:rpt lat="42.5706482" lon="-71.3759422"/>
+          <gpxx:rpt lat="42.5703907" lon="-71.3757277"/>
+          <gpxx:rpt lat="42.5703049" lon="-71.3755131"/>
+          <gpxx:rpt lat="42.5702190" lon="-71.3741827"/>
+          <gpxx:rpt lat="42.5700474" lon="-71.3733673"/>
+          <gpxx:rpt lat="42.5697470" lon="-71.3729382"/>
+          <gpxx:rpt lat="42.5686741" lon="-71.3719940"/>
+          <gpxx:rpt lat="42.5684595" lon="-71.3717365"/>
+          <gpxx:rpt lat="42.5682020" lon="-71.3712215"/>
+          <gpxx:rpt lat="42.5681591" lon="-71.3707495">
+            <gpxx:Subclass>0500E2304C000CBE0F001F002E007A6D7E00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5684595" lon="-71.3692904"/>
+          <gpxx:rpt lat="42.5686312" lon="-71.3681746"/>
+          <gpxx:rpt lat="42.5686312" lon="-71.3676596"/>
+          <gpxx:rpt lat="42.5684595" lon="-71.3671446">
+            <gpxx:Subclass>0500E2304C000CBE0F001F002E00F36D4A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5680304" lon="-71.3662863"/>
+          <gpxx:rpt lat="42.5674725" lon="-71.3655567"/>
+          <gpxx:rpt lat="42.5674539" lon="-71.3655072">
+            <gpxx:Subclass>0500E2304C000CBE0F002117000022000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5674539" lon="-71.3655072">
+      <time>2010-02-25T16:56:05Z</time>
+      <name>87 Proctor Rd</name>
+      <cmt>87 Proctor Rd</cmt>
+      <desc>87 Proctor Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C000CBE0F0001000000C4210000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5674539" lon="-71.3655072">
+            <gpxx:Subclass>0500E2304C000CBE0F002116000022002200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5673437" lon="-71.3652134"/>
+          <gpxx:rpt lat="42.5672579" lon="-71.3645697">
+            <gpxx:Subclass>0500E2304C0035BE0F001F002E000C6EF701</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5671721" lon="-71.3637114"/>
+          <gpxx:rpt lat="42.5668716" lon="-71.3625956"/>
+          <gpxx:rpt lat="42.5667858" lon="-71.3614798"/>
+          <gpxx:rpt lat="42.5659704" lon="-71.3604069"/>
+          <gpxx:rpt lat="42.5659704" lon="-71.3604069"/>
+          <gpxx:rpt lat="42.5658417" lon="-71.3602352"/>
+          <gpxx:rpt lat="42.5651979" lon="-71.3598061"/>
+          <gpxx:rpt lat="42.5651979" lon="-71.3598061"/>
+          <gpxx:rpt lat="42.5647259" lon="-71.3594198"/>
+          <gpxx:rpt lat="42.5643396" lon="-71.3589048"/>
+          <gpxx:rpt lat="42.5641680" lon="-71.3585615"/>
+          <gpxx:rpt lat="42.5639963" lon="-71.3581324"/>
+          <gpxx:rpt lat="42.5638676" lon="-71.3575745"/>
+          <gpxx:rpt lat="42.5637817" lon="-71.3561153"/>
+          <gpxx:rpt lat="42.5636530" lon="-71.3553858"/>
+          <gpxx:rpt lat="42.5633955" lon="-71.3551283"/>
+          <gpxx:rpt lat="42.5623226" lon="-71.3546562"/>
+          <gpxx:rpt lat="42.5619793" lon="-71.3544846"/>
+          <gpxx:rpt lat="42.5615931" lon="-71.3540983"/>
+          <gpxx:rpt lat="42.5614214" lon="-71.3537550">
+            <gpxx:Subclass>0600E2304C00F8BD0F001F02250078942F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5605631" lon="-71.3536692"/>
+          <gpxx:rpt lat="42.5603914" lon="-71.3535833">
+            <gpxx:Subclass>0500E2304C00E7270C001F0225008F94BC00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5594044" lon="-71.3539696"/>
+          <gpxx:rpt lat="42.5580740" lon="-71.3540125"/>
+          <gpxx:rpt lat="42.5575161" lon="-71.3539267"/>
+          <gpxx:rpt lat="42.5564503" lon="-71.3535391">
+            <gpxx:Subclass>0500E2304C00E7270C002117000011050000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5564504" lon="-71.3535391">
+      <time>2010-02-25T16:56:45Z</time>
+      <name>1070 Lowell St</name>
+      <cmt>1070 Lowell St</cmt>
+      <desc>1070 Lowell St</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C00E7270C0001800D0016490000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5564503" lon="-71.3535391">
+            <gpxx:Subclass>0500E2304C00E7270C002116000011054900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5560999" lon="-71.3534117"/>
+          <gpxx:rpt lat="42.5548983" lon="-71.3532829">
+            <gpxx:Subclass>0500E2304C00AA8406001F022E005D6E2C01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5555849" lon="-71.3555145"/>
+          <gpxx:rpt lat="42.5555849" lon="-71.3559437"/>
+          <gpxx:rpt lat="42.5554991" lon="-71.3565874"/>
+          <gpxx:rpt lat="42.5550699" lon="-71.3580465"/>
+          <gpxx:rpt lat="42.5547695" lon="-71.3588190"/>
+          <gpxx:rpt lat="42.5541258" lon="-71.3595915"/>
+          <gpxx:rpt lat="42.5531387" lon="-71.3604927">
+            <gpxx:Subclass>0500E2304C008F8406001F022E00176E4701</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5534391" lon="-71.3612223"/>
+          <gpxx:rpt lat="42.5536108" lon="-71.3620377"/>
+          <gpxx:rpt lat="42.5536537" lon="-71.3630247"/>
+          <gpxx:rpt lat="42.5536966" lon="-71.3643980"/>
+          <gpxx:rpt lat="42.5536537" lon="-71.3652134"/>
+          <gpxx:rpt lat="42.5535250" lon="-71.3657713"/>
+          <gpxx:rpt lat="42.5532675" lon="-71.3664579"/>
+          <gpxx:rpt lat="42.5528383" lon="-71.3672733"/>
+          <gpxx:rpt lat="42.5520658" lon="-71.3677025"/>
+          <gpxx:rpt lat="42.5513792" lon="-71.3678312"/>
+          <gpxx:rpt lat="42.5512075" lon="-71.3679600">
+            <gpxx:Subclass>0500E2304C00448506001F002E00B06D7201</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5510788" lon="-71.3680458"/>
+          <gpxx:rpt lat="42.5509501" lon="-71.3683891"/>
+          <gpxx:rpt lat="42.5507784" lon="-71.3691616"/>
+          <gpxx:rpt lat="42.5506496" lon="-71.3695908"/>
+          <gpxx:rpt lat="42.5503922" lon="-71.3699770"/>
+          <gpxx:rpt lat="42.5501347" lon="-71.3701916"/>
+          <gpxx:rpt lat="42.5498343" lon="-71.3703632"/>
+          <gpxx:rpt lat="42.5494909" lon="-71.3704491"/>
+          <gpxx:rpt lat="42.5487185" lon="-71.3703632"/>
+          <gpxx:rpt lat="42.5481606" lon="-71.3704491"/>
+          <gpxx:rpt lat="42.5478172" lon="-71.3706207"/>
+          <gpxx:rpt lat="42.5468302" lon="-71.3713074"/>
+          <gpxx:rpt lat="42.5468302" lon="-71.3713074"/>
+          <gpxx:rpt lat="42.5463581" lon="-71.3717365"/>
+          <gpxx:rpt lat="42.5460577" lon="-71.3720798"/>
+          <gpxx:rpt lat="42.5453281" lon="-71.3737965">
+            <gpxx:Subclass>0500E2304C00448506001F00250099A07A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5450277" lon="-71.3741827"/>
+          <gpxx:rpt lat="42.5441694" lon="-71.3747835"/>
+          <gpxx:rpt lat="42.5429502" lon="-71.3750123">
+            <gpxx:Subclass>0500E2304C004485060021170000BB010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5429503" lon="-71.3750122">
+      <time>2010-02-25T16:56:58Z</time>
+      <name>1130 Curve St</name>
+      <cmt>1130 Curve St</cmt>
+      <desc>1130 Curve St</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C0044850600010002004C1F0000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5429502" lon="-71.3750123">
+            <gpxx:Subclass>0500E2304C004485060021160000BB011F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5427961" lon="-71.3750410"/>
+          <gpxx:rpt lat="42.5422812" lon="-71.3750839">
+            <gpxx:Subclass>0500E2304C00448506001F00250079A09C01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5409508" lon="-71.3755989"/>
+          <gpxx:rpt lat="42.5404787" lon="-71.3758135"/>
+          <gpxx:rpt lat="42.5401354" lon="-71.3760710"/>
+          <gpxx:rpt lat="42.5395775" lon="-71.3767147"/>
+          <gpxx:rpt lat="42.5394058" lon="-71.3768435"/>
+          <gpxx:rpt lat="42.5394058" lon="-71.3768435"/>
+          <gpxx:rpt lat="42.5388908" lon="-71.3768005"/>
+          <gpxx:rpt lat="42.5376463" lon="-71.3768864"/>
+          <gpxx:rpt lat="42.5373459" lon="-71.3770580"/>
+          <gpxx:rpt lat="42.5363588" lon="-71.3778305"/>
+          <gpxx:rpt lat="42.5359297" lon="-71.3780022"/>
+          <gpxx:rpt lat="42.5355005" lon="-71.3781309"/>
+          <gpxx:rpt lat="42.5347710" lon="-71.3781309"/>
+          <gpxx:rpt lat="42.5339985" lon="-71.3778734">
+            <gpxx:Subclass>0300E2304C00068401001F0030001CD95700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5334835" lon="-71.3776588"/>
+          <gpxx:rpt lat="42.5330973" lon="-71.3773584"/>
+          <gpxx:rpt lat="42.5328398" lon="-71.3771439"/>
+          <gpxx:rpt lat="42.5324535" lon="-71.3765430">
+            <gpxx:Subclass>0600E2304C00185102001F02250038A0D000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5321531" lon="-71.3771009"/>
+          <gpxx:rpt lat="42.5315952" lon="-71.3774443"/>
+          <gpxx:rpt lat="42.5317240" lon="-71.3792467"/>
+          <gpxx:rpt lat="42.5316811" lon="-71.3798904"/>
+          <gpxx:rpt lat="42.5315952" lon="-71.3802338"/>
+          <gpxx:rpt lat="42.5313807" lon="-71.3804913"/>
+          <gpxx:rpt lat="42.5306940" lon="-71.3810921"/>
+          <gpxx:rpt lat="42.5305894" lon="-71.3812664">
+            <gpxx:Subclass>0600E2304C00185102002117000092020000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5305895" lon="-71.3812663">
+      <time>2010-02-25T16:57:04Z</time>
+      <name>165 Acton St</name>
+      <cmt>165 Acton St</cmt>
+      <desc>165 Acton St</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600E2304C00185102000180050045220000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5305894" lon="-71.3812664">
+            <gpxx:Subclass>0600E2304C00185102002116000092022200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5305653" lon="-71.3813066"/>
+          <gpxx:rpt lat="42.5305223" lon="-71.3822508">
+            <gpxx:Subclass>0600E2304C00185102001F002500829F6F01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5304794" lon="-71.3829374"/>
+          <gpxx:rpt lat="42.5306511" lon="-71.3848686"/>
+          <gpxx:rpt lat="42.5305653" lon="-71.3854694"/>
+          <gpxx:rpt lat="42.5303936" lon="-71.3858986"/>
+          <gpxx:rpt lat="42.5299215" lon="-71.3867998"/>
+          <gpxx:rpt lat="42.5297928" lon="-71.3869286"/>
+          <gpxx:rpt lat="42.5293207" lon="-71.3872719"/>
+          <gpxx:rpt lat="42.5291491" lon="-71.3874435"/>
+          <gpxx:rpt lat="42.5288916" lon="-71.3880014"/>
+          <gpxx:rpt lat="42.5282907" lon="-71.3887739"/>
+          <gpxx:rpt lat="42.5278187" lon="-71.3900614"/>
+          <gpxx:rpt lat="42.5274754" lon="-71.3908339"/>
+          <gpxx:rpt lat="42.5271749" lon="-71.3911343">
+            <gpxx:Subclass>0500E2304C00AECC13001F182500779E6602</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5267029" lon="-71.3912630"/>
+          <gpxx:rpt lat="42.5252867" lon="-71.3914776"/>
+          <gpxx:rpt lat="42.5247717" lon="-71.3915205"/>
+          <gpxx:rpt lat="42.5244284" lon="-71.3914347"/>
+          <gpxx:rpt lat="42.5239563" lon="-71.3911772"/>
+          <gpxx:rpt lat="42.5235701" lon="-71.3907480"/>
+          <gpxx:rpt lat="42.5232697" lon="-71.3904476"/>
+          <gpxx:rpt lat="42.5221968" lon="-71.3897610"/>
+          <gpxx:rpt lat="42.5220680" lon="-71.3897181"/>
+          <gpxx:rpt lat="42.5218964" lon="-71.3897610"/>
+          <gpxx:rpt lat="42.5217247" lon="-71.3898897"/>
+          <gpxx:rpt lat="42.5215960" lon="-71.3900185"/>
+          <gpxx:rpt lat="42.5214243" lon="-71.3900614"/>
+          <gpxx:rpt lat="42.5210810" lon="-71.3898897"/>
+          <gpxx:rpt lat="42.5198364" lon="-71.3895464"/>
+          <gpxx:rpt lat="42.5196218" lon="-71.3895893"/>
+          <gpxx:rpt lat="42.5192356" lon="-71.3899326"/>
+          <gpxx:rpt lat="42.5189352" lon="-71.3901043"/>
+          <gpxx:rpt lat="42.5179482" lon="-71.3904047"/>
+          <gpxx:rpt lat="42.5176477" lon="-71.3904047"/>
+          <gpxx:rpt lat="42.5161886" lon="-71.3897181"/>
+          <gpxx:rpt lat="42.5146866" lon="-71.3892889"/>
+          <gpxx:rpt lat="42.5146866" lon="-71.3892889">
+            <gpxx:Subclass>0500E2304C00AECC13001F002500CA9EC100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5114679" lon="-71.3872290"/>
+          <gpxx:rpt lat="42.5109384" lon="-71.3869329">
+            <gpxx:Subclass>0500E2304C00AECC1300211700006D010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.5109384" lon="-71.3869329">
+      <time>2010-02-25T16:57:14Z</time>
+      <name>988 West St</name>
+      <cmt>988 West St</cmt>
+      <desc>988 West St</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C00AECC130001000200BDC70000</gpxx:Subclass>
+          <gpxx:rpt lat="42.5109384" lon="-71.3869329">
+            <gpxx:Subclass>0500E2304C00AECC1300211600006D01C800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5100088" lon="-71.3864136"/>
+          <gpxx:rpt lat="42.5097513" lon="-71.3861990"/>
+          <gpxx:rpt lat="42.5094938" lon="-71.3859844"/>
+          <gpxx:rpt lat="42.5091934" lon="-71.3855124"/>
+          <gpxx:rpt lat="42.5078201" lon="-71.3831520">
+            <gpxx:Subclass>0500E2304C00AECC13001F0025004A9F5500</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5067472" lon="-71.3828945"/>
+          <gpxx:rpt lat="42.5060177" lon="-71.3826799">
+            <gpxx:Subclass>0500E2304C002A940F001F022E00EE6CB701</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.5058460" lon="-71.3828087"/>
+          <gpxx:rpt lat="42.5048161" lon="-71.3834095"/>
+          <gpxx:rpt lat="42.5045586" lon="-71.3837528"/>
+          <gpxx:rpt lat="42.5039577" lon="-71.3849545"/>
+          <gpxx:rpt lat="42.5037003" lon="-71.3852978"/>
+          <gpxx:rpt lat="42.5033140" lon="-71.3856840"/>
+          <gpxx:rpt lat="42.5022411" lon="-71.3865423"/>
+          <gpxx:rpt lat="42.5011683" lon="-71.3873577"/>
+          <gpxx:rpt lat="42.4988079" lon="-71.3888597"/>
+          <gpxx:rpt lat="42.4981642" lon="-71.3894176">
+            <gpxx:Subclass>0500E2304C002A940F001F002500BF9E3B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4976492" lon="-71.3898468"/>
+          <gpxx:rpt lat="42.4972630" lon="-71.3903189"/>
+          <gpxx:rpt lat="42.4971775" lon="-71.3904686">
+            <gpxx:Subclass>0500E2304C002A940F002117000068010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.4971775" lon="-71.3904683">
+      <time>2010-02-25T16:57:26Z</time>
+      <name>299 Pope Rd</name>
+      <cmt>299 Pope Rd</cmt>
+      <desc>299 Pope Rd</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0500E2304C002A940F0001800100EA850000</gpxx:Subclass>
+          <gpxx:rpt lat="42.4971775" lon="-71.3904686">
+            <gpxx:Subclass>0500E2304C002A940F002116000068018600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4970913" lon="-71.3906193"/>
+          <gpxx:rpt lat="42.4965763" lon="-71.3917780"/>
+          <gpxx:rpt lat="42.4954605" lon="-71.3935804">
+            <gpxx:Subclass>0500E2304C002A940F001F002500089EE200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4943876" lon="-71.3957262"/>
+          <gpxx:rpt lat="42.4929285" lon="-71.3992023">
+            <gpxx:Subclass>0500E2304C0037940F001F002E0089815A03</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4927139" lon="-71.3995028"/>
+          <gpxx:rpt lat="42.4917269" lon="-71.4002752"/>
+          <gpxx:rpt lat="42.4892807" lon="-71.4019489"/>
+          <gpxx:rpt lat="42.4881220" lon="-71.4028502"/>
+          <gpxx:rpt lat="42.4873066" lon="-71.4036226"/>
+          <gpxx:rpt lat="42.4868774" lon="-71.4040089"/>
+          <gpxx:rpt lat="42.4864483" lon="-71.4042664"/>
+          <gpxx:rpt lat="42.4861479" lon="-71.4044380"/>
+          <gpxx:rpt lat="42.4856758" lon="-71.4045238"/>
+          <gpxx:rpt lat="42.4855042" lon="-71.4045668"/>
+          <gpxx:rpt lat="42.4849033" lon="-71.4048243"/>
+          <gpxx:rpt lat="42.4844313" lon="-71.4050817"/>
+          <gpxx:rpt lat="42.4801826" lon="-71.4080858"/>
+          <gpxx:rpt lat="42.4793673" lon="-71.4087296"/>
+          <gpxx:rpt lat="42.4793673" lon="-71.4087296"/>
+          <gpxx:rpt lat="42.4778223" lon="-71.4100599"/>
+          <gpxx:rpt lat="42.4767065" lon="-71.4110041">
+            <gpxx:Subclass>0300E2304C0071A401001F022E00B7805700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="42.4774361" lon="-71.4124203"/>
+          <gpxx:rpt lat="42.4778226" lon="-71.4130277">
+            <gpxx:Subclass>0300E2304C0071A401002117000055010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="42.4778226" lon="-71.4130278">
+      <time>2010-02-25T16:58:26Z</time>
+      <name>S/F - Bagels Plus</name>
+      <cmt>98 Great Rd</cmt>
+      <desc>98 Great Rd</desc>
+      <sym>Bike Trail</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>
+ 
+
